@@ -1,0 +1,22 @@
+C:\Documents\Documents\Studia\3\Inżynieria programowania\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.AssemblyReference.cache
+C:\Documents\Documents\Studia\3\Inżynieria programowania\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
+C:\Documents\Documents\Studia\3\Inżynieria programowania\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Documents\Documents\Studia\3\Inżynieria programowania\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+C:\Documents\Documents\Studia\3\Inżynieria programowania\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+C:\Documents\Documents\Studia\3\Inżynieria programowania\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Documents\Documents\Studia\3\Inżynieria programowania\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Documents\Documents\Studia\3\Inżynieria programowania\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Documents\Documents\Studia\3\Inżynieria programowania\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Documents\Documents\Studia\3\Inżynieria programowania\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Documents\Documents\Studia\3\Inżynieria programowania\szptal_Windows Forms\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.AssemblyReference.cache
+C:\Documents\Documents\Studia\3\Inżynieria programowania\szptal_Windows Forms\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
+C:\Documents\Documents\Studia\3\Inżynieria programowania\szptal_Windows Forms\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Documents\Documents\Studia\3\Inżynieria programowania\szptal_Windows Forms\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+C:\Documents\Documents\Studia\3\Inżynieria programowania\szptal_Windows Forms\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+C:\Documents\Documents\Studia\3\Inżynieria programowania\szptal_Windows Forms\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Documents\Documents\Studia\3\Inżynieria programowania\szptal_Windows Forms\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Documents\Documents\Studia\3\Inżynieria programowania\szptal_Windows Forms\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Documents\Documents\Studia\3\Inżynieria programowania\szptal_Windows Forms\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Documents\Documents\Studia\3\Inżynieria programowania\szptal_Windows Forms\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Documents\Documents\Studia\3\Inżynieria programowania\szptal_Windows Forms\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form2.resources
+C:\Documents\Documents\Studia\3\Inżynieria programowania\szptal_Windows Forms\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Menu.resources
