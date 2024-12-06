@@ -19,7 +19,7 @@ namespace WindowsFormsApp1
 
         private void Menu_Load(object sender, EventArgs e)
         {
-S
+
         }
     }
 }
