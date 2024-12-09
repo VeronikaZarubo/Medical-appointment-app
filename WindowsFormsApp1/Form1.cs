@@ -86,9 +86,26 @@ namespace WindowsFormsApp1
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Form2 newLevel = new Form2();
-            this.Hide();
-            newLevel.Show();
+            string login;
+            string pass;
+            login = textBox1.Text;
+            pass = textBox2.Text;
+
+            if (string.IsNullOrEmpty(login) && string.IsNullOrEmpty(pass))
+                MessageBox.Show("Proszę podać login i hasło");
+            else if (string.IsNullOrEmpty(login))
+                MessageBox.Show("Proszę podać login");
+            else if (string.IsNullOrEmpty(pass))
+                MessageBox.Show("Proszę podać hasło");
+            else if (login == pass)
+            {
+                Form2 newLevel = new Form2();
+                this.Hide();
+                newLevel.Show();
+            }
+            //else MessageBox.Show("Zły login lub hasło"); 
+            
+            
         }
         private void label4_Click(object sender, EventArgs e)
         {
