@@ -71,11 +71,6 @@ namespace WindowsFormsApp1
             
         }
 
-        public void Rejestracja()
-        {
-            
-        }
-
         private void OmFormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
