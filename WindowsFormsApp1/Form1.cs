@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Globalization;
 using System.Linq;
@@ -19,6 +20,7 @@ namespace WindowsFormsApp1
             InitializeComponent();                                  
 
         }
+        SqlConnection conn = new SqlConnection();
 
         private void button1_Click(object sender, EventArgs e)
         {
