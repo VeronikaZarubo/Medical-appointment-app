@@ -100,21 +100,16 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Ingoude Company.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Rejestracja.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Logowanie.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Baza danych .accdb1.accdb">
+    <Content Include="Baza_edytowana.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <None Include="Resources\menu.png" />
-    <None Include="Resources\glpat-QqNwCgQh-WZ5QdMfPW-_.png" />
-    <None Include="Resources\15.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
