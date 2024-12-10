@@ -73,26 +73,6 @@ namespace WindowsFormsApp1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap glpat_QqNwCgQh_WZ5QdMfPW__ {
-            get {
-                object obj = ResourceManager.GetObject("glpat-QqNwCgQh-WZ5QdMfPW-_", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Ingoude_Company {
-            get {
-                object obj = ResourceManager.GetObject("Ingoude Company", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Logowanie {
             get {
                 object obj = ResourceManager.GetObject("Logowanie", resourceCulture);
