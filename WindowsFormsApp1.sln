@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApp1", "WindowsFormsApp1\WindowsFormsApp1.csproj", "{EBB8AA23-42CC-4040-8930-AA0F86E767FD}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{058F3AD8-1036-4EC3-A404-5A6E2D60A940}"
+	ProjectSection(SolutionItems) = preProject
+		..\Baza_edytowana.accdb = ..\Baza_edytowana.accdb
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
