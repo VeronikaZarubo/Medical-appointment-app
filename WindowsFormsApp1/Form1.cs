@@ -17,11 +17,10 @@ namespace WindowsFormsApp1
     {
         public Form1()
         {
-            InitializeComponent();                                  
+            InitializeComponent();                                 
 
         }
-        SqlConnection conn = new SqlConnection();
-
+        
         private void button1_Click(object sender, EventArgs e)
         {
             string name;
