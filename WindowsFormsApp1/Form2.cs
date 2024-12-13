@@ -96,7 +96,7 @@ namespace WindowsFormsApp1
                 {
                     command.Parameters.Clear();
 
-                    command.Parameters.AddWithValue("@Email", username.Trim().ToString());
+                    command.Parameters.AddWithValue("@Email", username.Trim().ToString()); 
                     command.Parameters.AddWithValue("@Haslo", password.Trim().ToString());
 
                     rd = command.ExecuteReader();
@@ -139,7 +139,7 @@ namespace WindowsFormsApp1
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
-        {
+        { 
 
         }
 
