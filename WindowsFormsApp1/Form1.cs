@@ -43,7 +43,7 @@ namespace WindowsFormsApp1
                 logowanie.Show();
             }
 
-        }
+        } 
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {

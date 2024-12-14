@@ -31,12 +31,12 @@ namespace WindowsFormsApp1
 
         private void tb_search_KeyPress(object sender, KeyPressEventArgs e)
         {
-            OleDbConnection connection = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source="
-                                                              + Application.StartupPath + @"\Baza_edytowana.accdb");
-            if (tb_search.Text != "")
-            {
+            //OleDbConnection connection = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source="
+            //                                                  + Application.StartupPath + @"\Baza_edytowana.accdb");
+            //if (tb_search.Text != "")
+            //{
 
-            }
+            //}
 
         }
     }
