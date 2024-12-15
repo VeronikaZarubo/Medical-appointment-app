@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Documents\\Documents\\Studia\\3\\In\u017Cynieria programowania\\szptal_Windows Forms\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EBB8AA23-42CC-4040-8930-AA0F86E767FD}|WindowsFormsApp1\\WindowsFormsApp1.csproj|c:\\documents\\documents\\studia\\3\\in\u017Cynieria programowania\\szptal_windows forms\\windowsformsapp1\\form2.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EBB8AA23-42CC-4040-8930-AA0F86E767FD}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\form2.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EBB8AA23-42CC-4040-8930-AA0F86E767FD}|WindowsFormsApp1\\WindowsFormsApp1.csproj|c:\\documents\\documents\\studia\\3\\in\u017Cynieria programowania\\szptal_windows forms\\windowsformsapp1\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EBB8AA23-42CC-4040-8930-AA0F86E767FD}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EBB8AA23-42CC-4040-8930-AA0F86E767FD}|WindowsFormsApp1\\WindowsFormsApp1.csproj|c:\\documents\\documents\\studia\\3\\in\u017Cynieria programowania\\szptal_windows forms\\windowsformsapp1\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{EBB8AA23-42CC-4040-8930-AA0F86E767FD}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EBB8AA23-42CC-4040-8930-AA0F86E767FD}|WindowsFormsApp1\\WindowsFormsApp1.csproj|c:\\documents\\documents\\studia\\3\\in\u017Cynieria programowania\\szptal_windows forms\\windowsformsapp1\\form2.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EBB8AA23-42CC-4040-8930-AA0F86E767FD}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\form2.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,12 +27,25 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Form2.cs",
+              "DocumentMoniker": "C:\\Documents\\Documents\\Studia\\3\\In\u017Cynieria programowania\\szptal_Windows Forms\\WindowsFormsApp1\\Form2.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\Form2.cs",
+              "ToolTip": "C:\\Documents\\Documents\\Studia\\3\\In\u017Cynieria programowania\\szptal_Windows Forms\\WindowsFormsApp1\\Form2.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\Form2.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAQwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-15T13:03:49.186Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Form2.Designer.cs",
               "DocumentMoniker": "C:\\Documents\\Documents\\Studia\\3\\In\u017Cynieria programowania\\szptal_Windows Forms\\WindowsFormsApp1\\Form2.Designer.cs",
               "RelativeDocumentMoniker": "WindowsFormsApp1\\Form2.Designer.cs",
               "ToolTip": "C:\\Documents\\Documents\\Studia\\3\\In\u017Cynieria programowania\\szptal_Windows Forms\\WindowsFormsApp1\\Form2.Designer.cs",
               "RelativeToolTip": "WindowsFormsApp1\\Form2.Designer.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAnAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAIEAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-14T16:16:58.34Z",
               "EditorCaption": ""
