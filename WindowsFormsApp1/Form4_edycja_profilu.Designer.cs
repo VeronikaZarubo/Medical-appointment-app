@@ -44,6 +44,7 @@
             // button2_anulujDane
             // 
             this.button2_anulujDane.BackColor = System.Drawing.Color.Azure;
+            this.button2_anulujDane.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2_anulujDane.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button2_anulujDane.Location = new System.Drawing.Point(351, 315);
             this.button2_anulujDane.Name = "button2_anulujDane";
@@ -56,6 +57,7 @@
             // button1_zapiszDane
             // 
             this.button1_zapiszDane.BackColor = System.Drawing.Color.Azure;
+            this.button1_zapiszDane.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1_zapiszDane.Location = new System.Drawing.Point(146, 315);
             this.button1_zapiszDane.Name = "button1_zapiszDane";
             this.button1_zapiszDane.Size = new System.Drawing.Size(112, 53);
@@ -76,11 +78,11 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Azure;
-            this.label4.Font = new System.Drawing.Font("MingLiU_HKSCS-ExtB", 10.2F);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(357, 185);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(53, 17);
+            this.label4.Size = new System.Drawing.Size(59, 20);
             this.label4.TabIndex = 34;
             this.label4.Text = "EMAIL";
             // 
@@ -96,11 +98,11 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Azure;
-            this.label2.Font = new System.Drawing.Font("MingLiU_HKSCS-ExtB", 10.2F);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(357, 104);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(89, 17);
+            this.label2.Size = new System.Drawing.Size(101, 20);
             this.label2.TabIndex = 32;
             this.label2.Text = "NAZWISKO ";
             // 
@@ -116,11 +118,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Azure;
-            this.label1.Font = new System.Drawing.Font("MingLiU_HKSCS-ExtB", 10.2F);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(359, 30);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 17);
+            this.label1.Size = new System.Drawing.Size(42, 20);
             this.label1.TabIndex = 30;
             this.label1.Text = "IMIĘ";
             // 
@@ -142,6 +144,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PowderBlue;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(612, 418);
             this.Controls.Add(this.button2_anulujDane);
             this.Controls.Add(this.button1_zapiszDane);
@@ -152,8 +155,10 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox1_imie);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Form4_edycja_profilu";
-            this.Text = "Form4_edycja_profilu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Edycja profilu";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
