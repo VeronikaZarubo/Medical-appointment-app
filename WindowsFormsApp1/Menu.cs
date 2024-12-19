@@ -13,6 +13,9 @@ namespace WindowsFormsApp1
 {
     public partial class Menu : Form
     {
+        private string name;
+        private string surname;
+        private string login;
         public Menu()
         {
             InitializeComponent();
@@ -37,6 +40,16 @@ namespace WindowsFormsApp1
             //{
 
             //}
+
+        }
+
+        private void button1_Moj_profil_Click(object sender, EventArgs e)
+        {
+            // Передаем данные пользователя в конструктор формы profil
+            using (Form3_profil form = new Form3_profil(name, surname, login))
+            {
+                form.ShowDialog(); // Открываем форму модально
+            }
 
         }
     }
