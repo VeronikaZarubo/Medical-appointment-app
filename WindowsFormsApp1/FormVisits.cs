@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.OleDb; // Do obsługi bazy danych Access
+using System.Data.OleDb; 
 
 namespace WindowsFormsApp1
 {
@@ -16,12 +16,11 @@ namespace WindowsFormsApp1
         public FormVisits()
         {
             InitializeComponent();
-            LoadVisitsFromDatabase(); // Ładowanie danych z bazy danych
+            LoadVisitsFromDatabase(); 
         }
 
         private void LoadVisitsFromDatabase()
         {
-            // Połączenie do bazy danych Access
             string connectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\\Baza_edytowana.accdb";
 
             try
@@ -30,7 +29,7 @@ namespace WindowsFormsApp1
                 {
                     connection.Open();
 
-                    // Zapytanie do zaplanowanych wizyt
+                    
                     string queryScheduled = "SELECT Data_wizyty, Pacjent, Lekarz FROM Wizyta WHERE Data_wizyty >= Date()";
                     using (OleDbCommand command = new OleDbCommand(queryScheduled, connection))
                     using (OleDbDataReader reader = command.ExecuteReader())
@@ -38,11 +37,11 @@ namespace WindowsFormsApp1
                         while (reader.Read())
                         {
                             string visit = $"{reader.GetDateTime(0):HH:mm - dd.MM.yyyy} - {reader.GetString(1)} - {reader.GetString(2)}";
-                            listBoxScheduledVisits.Items.Add(visit); // Dodanie do listy zaplanowanych wizyt
+                            listBoxScheduledVisits.Items.Add(visit); 
                         }
         }
 
-                    // Zapytanie do historii wizyt
+                  
                     string queryHistory = "SELECT Data_wizyty, Pacjent, Lekarz FROM Wizyta WHERE Data_wizyty < Date()";
                     using (OleDbCommand command = new OleDbCommand(queryHistory, connection))
                     using (OleDbDataReader reader = command.ExecuteReader())
@@ -50,7 +49,7 @@ namespace WindowsFormsApp1
                         while (reader.Read())
                         {
                             string visit = $"{reader.GetDateTime(0):HH:mm - dd.MM.yyyy} - {reader.GetString(1)} - {reader.GetString(2)}";
-                            listBoxHistoryVisits.Items.Add(visit); // Dodanie do listy historii wizyt
+                            listBoxHistoryVisits.Items.Add(visit); 
                         }
                     }
                 }
@@ -63,7 +62,6 @@ namespace WindowsFormsApp1
 
         private void buttonHome_Click(object sender, EventArgs e)
         {
-            // Powrót do głównej formy (np. logowanie)
             Form2 loginForm = new Form2();
             this.Hide();
             loginForm.Show();
