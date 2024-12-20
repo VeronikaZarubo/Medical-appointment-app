@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace WindowsFormsApp1
 {
@@ -16,6 +18,10 @@ namespace WindowsFormsApp1
         private string name;
         private string surname;
         private string login;
+
+        public static string connectString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Baza danych .accdb1_nowa.accdb;";
+        private OleDbConnection connection;
+
         public Menu()
         {
             InitializeComponent();
@@ -31,13 +37,12 @@ namespace WindowsFormsApp1
         {
 
         }
-
         private void tb_search_KeyPress(object sender, KeyPressEventArgs e)
         {
-            //OleDbConnection connection = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source="
-            //                                                  + Application.StartupPath + @"\Baza_edytowana.accdb");
-            //if (tb_search.Text != "")
+            //oledbconnection connection = new oledbconnection("provider=microsoft.ace.oledb.12.0;data source=baza danych .accdb1_nowa.accdb");
+            //if (tb_search.text != "")
             //{
+
 
             //}
 
@@ -58,6 +63,40 @@ namespace WindowsFormsApp1
             Rejestracja newLevel = new Rejestracja();
             this.Hide();
             newLevel.Show();
+        }
+
+        private void search_button_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string spec = tb_search.Text.ToString();
+
+                connection.Open();
+
+                string query = "SELECT * FROM Lekarz WHERE Specjalizacja = @spec;";
+
+                using (OleDbCommand command = new OleDbCommand(query, connection))
+                {
+                    command.Parameters.Clear();
+
+                    command.Parameters.AddWithValue("@Specjalizacja", spec.Trim());
+
+                    OleDbDataAdapter da = new OleDbDataAdapter(command);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+                    dataGridView1.DataSource = dt;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                connection.Close();
+
+                //spec = string.Empty;
+            }
         }
     }
 }

@@ -32,15 +32,16 @@
             this.tb_search = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button1_Moj_profil = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.log_out_button = new System.Windows.Forms.Button();
+            this.search_button = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // tb_search
             // 
-            this.tb_search.Location = new System.Drawing.Point(373, 386);
+            this.tb_search.Location = new System.Drawing.Point(373, 379);
             this.tb_search.Name = "tb_search";
-            this.tb_search.Size = new System.Drawing.Size(317, 22);
+            this.tb_search.Size = new System.Drawing.Size(249, 22);
             this.tb_search.TabIndex = 0;
             this.tb_search.TextChanged += new System.EventHandler(this.tb_search_TextChanged);
             this.tb_search.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_search_KeyPress);
@@ -67,17 +68,30 @@
             this.button1_Moj_profil.UseVisualStyleBackColor = false;
             this.button1_Moj_profil.Click += new System.EventHandler(this.button1_Moj_profil_Click);
             // 
-            // button1
+            // log_out_button
             // 
-            this.button1.BackColor = System.Drawing.Color.AliceBlue;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(12, 14);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(146, 45);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Wyloguj się";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.log_out_button.BackColor = System.Drawing.Color.AliceBlue;
+            this.log_out_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.log_out_button.Location = new System.Drawing.Point(12, 14);
+            this.log_out_button.Name = "log_out_button";
+            this.log_out_button.Size = new System.Drawing.Size(146, 45);
+            this.log_out_button.TabIndex = 3;
+            this.log_out_button.Text = "Wyloguj się";
+            this.log_out_button.UseVisualStyleBackColor = false;
+            this.log_out_button.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // search_button
+            // 
+            this.search_button.BackColor = System.Drawing.Color.AliceBlue;
+            this.search_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.search_button.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.search_button.Location = new System.Drawing.Point(646, 369);
+            this.search_button.Name = "search_button";
+            this.search_button.Size = new System.Drawing.Size(44, 39);
+            this.search_button.TabIndex = 4;
+            this.search_button.Text = "🔍";
+            this.search_button.UseVisualStyleBackColor = false;
+            this.search_button.Click += new System.EventHandler(this.search_button_Click);
             // 
             // Menu
             // 
@@ -87,7 +101,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1082, 703);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.search_button);
+            this.Controls.Add(this.log_out_button);
             this.Controls.Add(this.button1_Moj_profil);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.tb_search);
@@ -109,6 +124,7 @@
         private System.Windows.Forms.TextBox tb_search;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button1_Moj_profil;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button log_out_button;
+        private System.Windows.Forms.Button search_button;
     }
 }
