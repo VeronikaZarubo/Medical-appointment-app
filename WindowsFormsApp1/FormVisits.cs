@@ -1,4 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb; // Do obsługi bazy danych Access
 
@@ -33,7 +40,7 @@ namespace WindowsFormsApp1
                             string visit = $"{reader.GetDateTime(0):HH:mm - dd.MM.yyyy} - {reader.GetString(1)} - {reader.GetString(2)}";
                             listBoxScheduledVisits.Items.Add(visit); // Dodanie do listy zaplanowanych wizyt
                         }
-                    }
+        }
 
                     // Zapytanie do historii wizyt
                     string queryHistory = "SELECT Data_wizyty, Pacjent, Lekarz FROM Wizyta WHERE Data_wizyty < Date()";
@@ -49,7 +56,7 @@ namespace WindowsFormsApp1
                 }
             }
             catch (Exception ex)
-            {
+        {
                 MessageBox.Show($"Błąd podczas ładowania danych: {ex.Message}", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }

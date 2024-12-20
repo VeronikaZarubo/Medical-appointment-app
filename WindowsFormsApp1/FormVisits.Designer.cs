@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data.SqlClient;
 using System.Windows.Forms;
 
 namespace WindowsFormsApp1
@@ -11,6 +12,8 @@ namespace WindowsFormsApp1
 
         private Label labelScheduled;
         private Label labelHistory;
+
+   
 
         #region Windows Form Designer generated code
 
@@ -90,8 +93,58 @@ namespace WindowsFormsApp1
             this.Text = "Historia wizyt";
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
 
+
         #endregion
+
+        private void buttonHome_Click(object sender, EventArgs e)
+        {
+            Form2 loginForm = new Form2();
+            this.Hide();
+            loginForm.Show();
+        }
+
+        private void LoadVisitsFromDatabase()
+        {
+            string connectionString = "Ваш_строка_подключения_к_БД";
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+
+                    string queryScheduled = "SELECT VisitDateTime, PatientName, DoctorName FROM Visits WHERE VisitType = 'Scheduled'";
+                    string queryHistory = "SELECT VisitDateTime, PatientName, DoctorName FROM Visits WHERE VisitType = 'History'";
+
+                    using (SqlCommand command = new SqlCommand(queryScheduled, connection))
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            string visit = $"{reader.GetDateTime(0):HH:mm - dd.MM.yyyy} - {reader.GetString(1)} - {reader.GetString(2)}";
+                            listBoxScheduledVisits.Items.Add(visit);
+                        }
+                    }
+
+                    using (SqlCommand command = new SqlCommand(queryHistory, connection))
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            string visit = $"{reader.GetDateTime(0):HH:mm - dd.MM.yyyy} - {reader.GetString(1)} - {reader.GetString(2)}";
+                            listBoxHistoryVisits.Items.Add(visit);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error data download: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
     }
 }
