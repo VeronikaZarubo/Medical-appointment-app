@@ -27,35 +27,115 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD:WindowsFormsApp1/Logowanie.cs
             //string login;
             //string pass;
             //login = textBox1.Text;
             //pass = textBox2.Text;
-
-            //if (string.IsNullOrEmpty(login) && string.IsNullOrEmpty(pass))
+=======
+            //try
             //{
-            //    MessageBox.Show("Proszę podać login i hasło");
-            //    textBox1.Focus();
-            //}                
+            //    connection.Open();
+            //    OleDbCommand cmd = connection.CreateCommand();
+            //    cmd.CommandType = CommandType.Text;
+            //    cmd.CommandText = string.Empty;
 
-            //else if (string.IsNullOrEmpty(login))
+
+            //    connection.Close();
+            //}
+            //catch
             //{
-            //    MessageBox.Show("Proszę podać login");
-            //    textBox1.Focus();
+            //    //
+
             //}
 
-            //else if (string.IsNullOrEmpty(pass))
+            string login;
+            string pass;
+            login = textBox1.Text;
+            pass = textBox2.Text;
+>>>>>>> edd75593adc09fd01c3d1f153b4660ec639e4367:WindowsFormsApp1/Form2.cs
+
+            if (string.IsNullOrEmpty(login) && string.IsNullOrEmpty(pass))
+            {
+                MessageBox.Show("Proszę podać login i hasło");
+                textBox1.Focus();
+            }
+
+            else if (string.IsNullOrEmpty(login))
+            {
+                MessageBox.Show("Proszę podać login");
+                textBox1.Focus();
+            }
+
+            else if (string.IsNullOrEmpty(pass))
+            {
+                MessageBox.Show("Proszę podać hasło");
+                textBox2.Focus();
+            }
+            else if (login == pass)
+            {
+                MessageBox.Show("Udane logowanie");
+                Menu newLevel = new Menu();
+                this.Hide();
+                newLevel.Show();
+            }
+            else MessageBox.Show("Zły login lub hasło");
+
+            //string username = textBox1.Text;
+            //string password = textBox2.Text;
+
+            //if (string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(password))
             //{
-            //    MessageBox.Show("Proszę podać hasło");
-            //    textBox2.Focus();
+            //    MessageBox.Show("Please enter both username and password.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            //    return;
             //}
-            //else if (login == pass)
+
+            //try
             //{
-            //    MessageBox.Show("Udane logowanie");
-            //    Menu newLevel = new Menu();
-            //    this.Hide();
-            //    newLevel.Show();
+            //    connection.Open();
+
+            //    //string query = "SELECT Email, Haslo FROM Pacjent WHERE Email = @username AND Haslo = @password";
+            //    string query = "SELECT Email, Haslo FROM Pacjent WHERE Email = @username AND Haslo = @password";                
+
+            //    using (OleDbCommand command = new OleDbCommand(query, connection))
+            //    {
+            //        command.Parameters.Clear();
+
+            //        command.Parameters.AddWithValue("@Email", username.Trim().ToString()); 
+            //        command.Parameters.AddWithValue("@Haslo", password.Trim().ToString());
+
+            //        rd = command.ExecuteReader();
+
+            //        if (rd.HasRows)
+            //        {
+            //            while (rd.Read())
+            //            {
+            //                MessageBox.Show("Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //            }
+
+            //            Menu newLevel = new Menu();
+            //            this.Hide();
+            //            newLevel.Show();
+
+            //            username = string.Empty;
+            //            password = string.Empty;
+            //        }
+            //        else
+            //        {
+            //            MessageBox.Show("Invalid username or password.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //        }
+            //    }
+
             //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
+            //finally
+            //{
+            //    connection.Close();
+            //}
+<<<<<<< HEAD:WindowsFormsApp1/Logowanie.cs
             //else MessageBox.Show("Zły login lub hasło");
 
             string username = textBox1.Text;
@@ -112,6 +192,8 @@ namespace WindowsFormsApp1
             {
                 connection.Close();
             }
+=======
+>>>>>>> edd75593adc09fd01c3d1f153b4660ec639e4367:WindowsFormsApp1/Form2.cs
         }
         private void button2_Click(object sender, EventArgs e)
         {
