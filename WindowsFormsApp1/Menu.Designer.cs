@@ -32,6 +32,7 @@
             this.tb_search = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button1_Moj_profil = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,13 +59,25 @@
             // 
             this.button1_Moj_profil.BackColor = System.Drawing.Color.AliceBlue;
             this.button1_Moj_profil.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1_Moj_profil.Location = new System.Drawing.Point(938, 12);
+            this.button1_Moj_profil.Location = new System.Drawing.Point(928, 12);
             this.button1_Moj_profil.Name = "button1_Moj_profil";
             this.button1_Moj_profil.Size = new System.Drawing.Size(132, 47);
             this.button1_Moj_profil.TabIndex = 2;
             this.button1_Moj_profil.Text = "Mój profil";
             this.button1_Moj_profil.UseVisualStyleBackColor = false;
             this.button1_Moj_profil.Click += new System.EventHandler(this.button1_Moj_profil_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.AliceBlue;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(12, 14);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(146, 45);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Wyloguj się";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Menu
             // 
@@ -74,6 +87,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1082, 703);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.button1_Moj_profil);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.tb_search);
@@ -95,5 +109,6 @@
         private System.Windows.Forms.TextBox tb_search;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button1_Moj_profil;
+        private System.Windows.Forms.Button button1;
     }
 }

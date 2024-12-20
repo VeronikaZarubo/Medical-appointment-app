@@ -16,12 +16,12 @@ namespace WindowsFormsApp1
             InitializeComponent();
             connection = new OleDbConnection(connectString);
         }
-        
+
         private void button1_Click(object sender, EventArgs e)
-        { 
+        {
 
             string name = textBox1.Text.ToString();
-            string surname = textBox2.Text.ToString(); 
+            string surname = textBox2.Text.ToString();
             string username = textBox3.Text.ToString();
             string password = textBox4.Text.ToString();
 
@@ -35,14 +35,14 @@ namespace WindowsFormsApp1
             {
                 connection.Open();
 
-                string query = "SELECT Email, Haslo FROM Pacjent WHERE Email = @username AND Haslo = @password";
+                string query = "SELECT Email, Hasło FROM Pacjent WHERE Email = @username AND Hasło = @password";
 
                 using (OleDbCommand command = new OleDbCommand(query, connection))
                 {
                     command.Parameters.Clear();
 
                     command.Parameters.AddWithValue("@Email", username.Trim());
-                    command.Parameters.AddWithValue("@Haslo", password.Trim());
+                    command.Parameters.AddWithValue("@Hasło", password.Trim());
 
                     rd = command.ExecuteReader();
 
@@ -78,7 +78,7 @@ namespace WindowsFormsApp1
                 MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
-            {               
+            {
                 connection.Close();
 
                 name = string.Empty;
@@ -86,7 +86,7 @@ namespace WindowsFormsApp1
                 username = string.Empty;
                 password = string.Empty;
             }
-        } 
+        }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
@@ -110,7 +110,7 @@ namespace WindowsFormsApp1
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         private void OmFormClosed(object sender, FormClosedEventArgs e)
@@ -135,4 +135,5 @@ namespace WindowsFormsApp1
 
         }
     }
+
 }
