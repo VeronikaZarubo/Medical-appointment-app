@@ -33,5 +33,27 @@ namespace WindowsFormsApp1.Properties {
                 return ((string)(this["Baza_edytowanaConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=\"|DataDirectory|\\Baza danych .accdb" +
+            "1_nowa.accdb\"")]
+        public string Baza_danych__accdb1_nowaConnectionString {
+            get {
+                return ((string)(this["Baza_danych__accdb1_nowaConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=\"|DataDirectory|\\Baza danych nowa.a" +
+            "ccdb\"")]
+        public string Baza_danych_nowaConnectionString {
+            get {
+                return ((string)(this["Baza_danych_nowaConnectionString"]));
+            }
+        }
     }
 }

@@ -20,9 +20,9 @@ namespace WindowsFormsApp1 {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("Baza_edytowanaDataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("_Baza_danych__accdb1_nowaDataSet")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class Baza_edytowanaDataSet : global::System.Data.DataSet {
+    public partial class _Baza_danych__accdb1_nowaDataSet : global::System.Data.DataSet {
         
         private LekarzDataTable tableLekarz;
         
@@ -30,11 +30,7 @@ namespace WindowsFormsApp1 {
         
         private SpecjalizacjaDataTable tableSpecjalizacja;
         
-        private Switchboard_ItemsDataTable tableSwitchboard_Items;
-        
         private WizytaDataTable tableWizyta;
-        
-        private global::System.Data.DataRelation relationSpecjalizacjeLekarze;
         
         private global::System.Data.DataRelation relationLekarzeWizyty;
         
@@ -44,7 +40,7 @@ namespace WindowsFormsApp1 {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public Baza_edytowanaDataSet() {
+        public _Baza_danych__accdb1_nowaDataSet() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -55,7 +51,7 @@ namespace WindowsFormsApp1 {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected Baza_edytowanaDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected _Baza_danych__accdb1_nowaDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -76,9 +72,6 @@ namespace WindowsFormsApp1 {
                 }
                 if ((ds.Tables["Specjalizacja"] != null)) {
                     base.Tables.Add(new SpecjalizacjaDataTable(ds.Tables["Specjalizacja"]));
-                }
-                if ((ds.Tables["Switchboard Items"] != null)) {
-                    base.Tables.Add(new Switchboard_ItemsDataTable(ds.Tables["Switchboard Items"]));
                 }
                 if ((ds.Tables["Wizyta"] != null)) {
                     base.Tables.Add(new WizytaDataTable(ds.Tables["Wizyta"]));
@@ -135,16 +128,6 @@ namespace WindowsFormsApp1 {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public Switchboard_ItemsDataTable Switchboard_Items {
-            get {
-                return this.tableSwitchboard_Items;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Browsable(false)]
-        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
         public WizytaDataTable Wizyta {
             get {
                 return this.tableWizyta;
@@ -193,7 +176,7 @@ namespace WindowsFormsApp1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            Baza_edytowanaDataSet cln = ((Baza_edytowanaDataSet)(base.Clone()));
+            _Baza_danych__accdb1_nowaDataSet cln = ((_Baza_danych__accdb1_nowaDataSet)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -226,9 +209,6 @@ namespace WindowsFormsApp1 {
                 }
                 if ((ds.Tables["Specjalizacja"] != null)) {
                     base.Tables.Add(new SpecjalizacjaDataTable(ds.Tables["Specjalizacja"]));
-                }
-                if ((ds.Tables["Switchboard Items"] != null)) {
-                    base.Tables.Add(new Switchboard_ItemsDataTable(ds.Tables["Switchboard Items"]));
                 }
                 if ((ds.Tables["Wizyta"] != null)) {
                     base.Tables.Add(new WizytaDataTable(ds.Tables["Wizyta"]));
@@ -284,19 +264,12 @@ namespace WindowsFormsApp1 {
                     this.tableSpecjalizacja.InitVars();
                 }
             }
-            this.tableSwitchboard_Items = ((Switchboard_ItemsDataTable)(base.Tables["Switchboard Items"]));
-            if ((initTable == true)) {
-                if ((this.tableSwitchboard_Items != null)) {
-                    this.tableSwitchboard_Items.InitVars();
-                }
-            }
             this.tableWizyta = ((WizytaDataTable)(base.Tables["Wizyta"]));
             if ((initTable == true)) {
                 if ((this.tableWizyta != null)) {
                     this.tableWizyta.InitVars();
                 }
             }
-            this.relationSpecjalizacjeLekarze = this.Relations["SpecjalizacjeLekarze"];
             this.relationLekarzeWizyty = this.Relations["LekarzeWizyty"];
             this.relationPacjentyWizyty = this.Relations["PacjentyWizyty"];
         }
@@ -304,9 +277,9 @@ namespace WindowsFormsApp1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "Baza_edytowanaDataSet";
+            this.DataSetName = "_Baza_danych__accdb1_nowaDataSet";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/Baza_edytowanaDataSet.xsd";
+            this.Namespace = "http://tempuri.org/_Baza_danych__accdb1_nowaDataSet.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableLekarz = new LekarzDataTable();
@@ -315,14 +288,8 @@ namespace WindowsFormsApp1 {
             base.Tables.Add(this.tablePacjent);
             this.tableSpecjalizacja = new SpecjalizacjaDataTable();
             base.Tables.Add(this.tableSpecjalizacja);
-            this.tableSwitchboard_Items = new Switchboard_ItemsDataTable();
-            base.Tables.Add(this.tableSwitchboard_Items);
             this.tableWizyta = new WizytaDataTable();
             base.Tables.Add(this.tableWizyta);
-            this.relationSpecjalizacjeLekarze = new global::System.Data.DataRelation("SpecjalizacjeLekarze", new global::System.Data.DataColumn[] {
-                        this.tableSpecjalizacja.IdentyfikatorColumn}, new global::System.Data.DataColumn[] {
-                        this.tableLekarz.SpecjalizcjaColumn}, false);
-            this.Relations.Add(this.relationSpecjalizacjeLekarze);
             this.relationLekarzeWizyty = new global::System.Data.DataRelation("LekarzeWizyty", new global::System.Data.DataColumn[] {
                         this.tableLekarz.Identyfikator_lekarzaColumn}, new global::System.Data.DataColumn[] {
                         this.tableWizyta.LekarzColumn}, false);
@@ -353,12 +320,6 @@ namespace WindowsFormsApp1 {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private bool ShouldSerializeSwitchboard_Items() {
-            return false;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private bool ShouldSerializeWizyta() {
             return false;
         }
@@ -374,7 +335,7 @@ namespace WindowsFormsApp1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            Baza_edytowanaDataSet ds = new Baza_edytowanaDataSet();
+            _Baza_danych__accdb1_nowaDataSet ds = new _Baza_danych__accdb1_nowaDataSet();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -428,9 +389,6 @@ namespace WindowsFormsApp1 {
         public delegate void SpecjalizacjaRowChangeEventHandler(object sender, SpecjalizacjaRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public delegate void Switchboard_ItemsRowChangeEventHandler(object sender, Switchboard_ItemsRowChangeEvent e);
-        
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public delegate void WizytaRowChangeEventHandler(object sender, WizytaRowChangeEvent e);
         
         /// <summary>
@@ -448,9 +406,13 @@ namespace WindowsFormsApp1 {
             
             private global::System.Data.DataColumn columnWiek;
             
-            private global::System.Data.DataColumn columnSpecjalizcja;
-            
             private global::System.Data.DataColumn columnWartość_wizyty;
+            
+            private global::System.Data.DataColumn columnSpecjalizacja;
+            
+            private global::System.Data.DataColumn columnDodatkowe_informacje;
+            
+            private global::System.Data.DataColumn columnCennik_usług;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -519,17 +481,33 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn SpecjalizcjaColumn {
+            public global::System.Data.DataColumn Wartość_wizytyColumn {
                 get {
-                    return this.columnSpecjalizcja;
+                    return this.columnWartość_wizyty;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn Wartość_wizytyColumn {
+            public global::System.Data.DataColumn SpecjalizacjaColumn {
                 get {
-                    return this.columnWartość_wizyty;
+                    return this.columnSpecjalizacja;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Dodatkowe_informacjeColumn {
+                get {
+                    return this.columnDodatkowe_informacje;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Cennik_usługColumn {
+                get {
+                    return this.columnCennik_usług;
                 }
             }
             
@@ -570,18 +548,17 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public LekarzRow AddLekarzRow(string Nazwisko_lekarza, string Imię_lekarza, int Wiek, SpecjalizacjaRow parentSpecjalizacjaRowBySpecjalizacjeLekarze, decimal Wartość_wizyty) {
+            public LekarzRow AddLekarzRow(string Nazwisko_lekarza, string Imię_lekarza, int Wiek, decimal Wartość_wizyty, string Specjalizacja, string Dodatkowe_informacje, string Cennik_usług) {
                 LekarzRow rowLekarzRow = ((LekarzRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         Nazwisko_lekarza,
                         Imię_lekarza,
                         Wiek,
-                        null,
-                        Wartość_wizyty};
-                if ((parentSpecjalizacjaRowBySpecjalizacjeLekarze != null)) {
-                    columnValuesArray[4] = parentSpecjalizacjaRowBySpecjalizacjeLekarze[0];
-                }
+                        Wartość_wizyty,
+                        Specjalizacja,
+                        Dodatkowe_informacje,
+                        Cennik_usług};
                 rowLekarzRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowLekarzRow);
                 return rowLekarzRow;
@@ -615,8 +592,10 @@ namespace WindowsFormsApp1 {
                 this.columnNazwisko_lekarza = base.Columns["Nazwisko lekarza"];
                 this.columnImię_lekarza = base.Columns["Imię lekarza"];
                 this.columnWiek = base.Columns["Wiek"];
-                this.columnSpecjalizcja = base.Columns["Specjalizcja"];
                 this.columnWartość_wizyty = base.Columns["Wartość wizyty"];
+                this.columnSpecjalizacja = base.Columns["Specjalizacja"];
+                this.columnDodatkowe_informacje = base.Columns["Dodatkowe informacje"];
+                this.columnCennik_usług = base.Columns["Cennik usług"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -630,10 +609,14 @@ namespace WindowsFormsApp1 {
                 base.Columns.Add(this.columnImię_lekarza);
                 this.columnWiek = new global::System.Data.DataColumn("Wiek", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnWiek);
-                this.columnSpecjalizcja = new global::System.Data.DataColumn("Specjalizcja", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSpecjalizcja);
                 this.columnWartość_wizyty = new global::System.Data.DataColumn("Wartość wizyty", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnWartość_wizyty);
+                this.columnSpecjalizacja = new global::System.Data.DataColumn("Specjalizacja", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSpecjalizacja);
+                this.columnDodatkowe_informacje = new global::System.Data.DataColumn("Dodatkowe informacje", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDodatkowe_informacje);
+                this.columnCennik_usług = new global::System.Data.DataColumn("Cennik usług", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCennik_usług);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnIdentyfikator_lekarza}, true));
                 this.columnIdentyfikator_lekarza.AutoIncrement = true;
@@ -643,6 +626,9 @@ namespace WindowsFormsApp1 {
                 this.columnIdentyfikator_lekarza.Unique = true;
                 this.columnNazwisko_lekarza.MaxLength = 30;
                 this.columnImię_lekarza.MaxLength = 30;
+                this.columnSpecjalizacja.MaxLength = 255;
+                this.columnDodatkowe_informacje.MaxLength = 536870910;
+                this.columnCennik_usług.MaxLength = 536870910;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -710,7 +696,7 @@ namespace WindowsFormsApp1 {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                Baza_edytowanaDataSet ds = new Baza_edytowanaDataSet();
+                _Baza_danych__accdb1_nowaDataSet ds = new _Baza_danych__accdb1_nowaDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -788,7 +774,7 @@ namespace WindowsFormsApp1 {
             
             private global::System.Data.DataColumn columnEmail;
             
-            private global::System.Data.DataColumn columnHaslo;
+            private global::System.Data.DataColumn columnHasło;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -873,9 +859,9 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn HasloColumn {
+            public global::System.Data.DataColumn HasłoColumn {
                 get {
-                    return this.columnHaslo;
+                    return this.columnHasło;
                 }
             }
             
@@ -916,7 +902,7 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public PacjentRow AddPacjentRow(string Nazwisko_pacjenta, string Imię_pacjenta, System.DateTime Data_urodzenia, string Adres, string Email, string Haslo) {
+            public PacjentRow AddPacjentRow(string Nazwisko_pacjenta, string Imię_pacjenta, System.DateTime Data_urodzenia, string Adres, string Email, string Hasło) {
                 PacjentRow rowPacjentRow = ((PacjentRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -925,7 +911,7 @@ namespace WindowsFormsApp1 {
                         Data_urodzenia,
                         Adres,
                         Email,
-                        Haslo};
+                        Hasło};
                 rowPacjentRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowPacjentRow);
                 return rowPacjentRow;
@@ -961,7 +947,7 @@ namespace WindowsFormsApp1 {
                 this.columnData_urodzenia = base.Columns["Data urodzenia"];
                 this.columnAdres = base.Columns["Adres"];
                 this.columnEmail = base.Columns["Email"];
-                this.columnHaslo = base.Columns["Haslo"];
+                this.columnHasło = base.Columns["Hasło"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -979,8 +965,8 @@ namespace WindowsFormsApp1 {
                 base.Columns.Add(this.columnAdres);
                 this.columnEmail = new global::System.Data.DataColumn("Email", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnEmail);
-                this.columnHaslo = new global::System.Data.DataColumn("Haslo", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnHaslo);
+                this.columnHasło = new global::System.Data.DataColumn("Hasło", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnHasło);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnIdentyfikator_pacjenta}, true));
                 this.columnIdentyfikator_pacjenta.AutoIncrement = true;
@@ -992,7 +978,7 @@ namespace WindowsFormsApp1 {
                 this.columnImię_pacjenta.MaxLength = 30;
                 this.columnAdres.MaxLength = 30;
                 this.columnEmail.MaxLength = 255;
-                this.columnHaslo.MaxLength = 255;
+                this.columnHasło.MaxLength = 255;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1060,7 +1046,7 @@ namespace WindowsFormsApp1 {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                Baza_edytowanaDataSet ds = new Baza_edytowanaDataSet();
+                _Baza_danych__accdb1_nowaDataSet ds = new _Baza_danych__accdb1_nowaDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1336,7 +1322,7 @@ namespace WindowsFormsApp1 {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                Baza_edytowanaDataSet ds = new Baza_edytowanaDataSet();
+                _Baza_danych__accdb1_nowaDataSet ds = new _Baza_danych__accdb1_nowaDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1355,324 +1341,6 @@ namespace WindowsFormsApp1 {
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
                 attribute2.FixedValue = "SpecjalizacjaDataTable";
-                type.Attributes.Add(attribute2);
-                type.Particle = sequence;
-                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
-                if (xs.Contains(dsSchema.TargetNamespace)) {
-                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
-                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
-                    try {
-                        global::System.Xml.Schema.XmlSchema schema = null;
-                        dsSchema.Write(s1);
-                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
-                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
-                            s2.SetLength(0);
-                            schema.Write(s2);
-                            if ((s1.Length == s2.Length)) {
-                                s1.Position = 0;
-                                s2.Position = 0;
-                                for (; ((s1.Position != s1.Length) 
-                                            && (s1.ReadByte() == s2.ReadByte())); ) {
-                                    ;
-                                }
-                                if ((s1.Position == s1.Length)) {
-                                    return type;
-                                }
-                            }
-                        }
-                    }
-                    finally {
-                        if ((s1 != null)) {
-                            s1.Close();
-                        }
-                        if ((s2 != null)) {
-                            s2.Close();
-                        }
-                    }
-                }
-                xs.Add(dsSchema);
-                return type;
-            }
-        }
-        
-        /// <summary>
-        ///Represents the strongly named DataTable class.
-        ///</summary>
-        [global::System.Serializable()]
-        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class Switchboard_ItemsDataTable : global::System.Data.TypedTableBase<Switchboard_ItemsRow> {
-            
-            private global::System.Data.DataColumn columnSwitchboardID;
-            
-            private global::System.Data.DataColumn columnItemNumber;
-            
-            private global::System.Data.DataColumn columnItemText;
-            
-            private global::System.Data.DataColumn columnCommand;
-            
-            private global::System.Data.DataColumn columnArgument;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public Switchboard_ItemsDataTable() {
-                this.TableName = "Switchboard Items";
-                this.BeginInit();
-                this.InitClass();
-                this.EndInit();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal Switchboard_ItemsDataTable(global::System.Data.DataTable table) {
-                this.TableName = table.TableName;
-                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
-                    this.CaseSensitive = table.CaseSensitive;
-                }
-                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
-                    this.Locale = table.Locale;
-                }
-                if ((table.Namespace != table.DataSet.Namespace)) {
-                    this.Namespace = table.Namespace;
-                }
-                this.Prefix = table.Prefix;
-                this.MinimumCapacity = table.MinimumCapacity;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected Switchboard_ItemsDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
-                    base(info, context) {
-                this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn SwitchboardIDColumn {
-                get {
-                    return this.columnSwitchboardID;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn ItemNumberColumn {
-                get {
-                    return this.columnItemNumber;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn ItemTextColumn {
-                get {
-                    return this.columnItemText;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn CommandColumn {
-                get {
-                    return this.columnCommand;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn ArgumentColumn {
-                get {
-                    return this.columnArgument;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            [global::System.ComponentModel.Browsable(false)]
-            public int Count {
-                get {
-                    return this.Rows.Count;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public Switchboard_ItemsRow this[int index] {
-                get {
-                    return ((Switchboard_ItemsRow)(this.Rows[index]));
-                }
-            }
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event Switchboard_ItemsRowChangeEventHandler Switchboard_ItemsRowChanging;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event Switchboard_ItemsRowChangeEventHandler Switchboard_ItemsRowChanged;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event Switchboard_ItemsRowChangeEventHandler Switchboard_ItemsRowDeleting;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event Switchboard_ItemsRowChangeEventHandler Switchboard_ItemsRowDeleted;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void AddSwitchboard_ItemsRow(Switchboard_ItemsRow row) {
-                this.Rows.Add(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public Switchboard_ItemsRow AddSwitchboard_ItemsRow(int SwitchboardID, short ItemNumber, string ItemText, short Command, string Argument) {
-                Switchboard_ItemsRow rowSwitchboard_ItemsRow = ((Switchboard_ItemsRow)(this.NewRow()));
-                object[] columnValuesArray = new object[] {
-                        SwitchboardID,
-                        ItemNumber,
-                        ItemText,
-                        Command,
-                        Argument};
-                rowSwitchboard_ItemsRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowSwitchboard_ItemsRow);
-                return rowSwitchboard_ItemsRow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public Switchboard_ItemsRow FindBySwitchboardIDItemNumber(int SwitchboardID, short ItemNumber) {
-                return ((Switchboard_ItemsRow)(this.Rows.Find(new object[] {
-                            SwitchboardID,
-                            ItemNumber})));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public override global::System.Data.DataTable Clone() {
-                Switchboard_ItemsDataTable cln = ((Switchboard_ItemsDataTable)(base.Clone()));
-                cln.InitVars();
-                return cln;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override global::System.Data.DataTable CreateInstance() {
-                return new Switchboard_ItemsDataTable();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal void InitVars() {
-                this.columnSwitchboardID = base.Columns["SwitchboardID"];
-                this.columnItemNumber = base.Columns["ItemNumber"];
-                this.columnItemText = base.Columns["ItemText"];
-                this.columnCommand = base.Columns["Command"];
-                this.columnArgument = base.Columns["Argument"];
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            private void InitClass() {
-                this.columnSwitchboardID = new global::System.Data.DataColumn("SwitchboardID", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSwitchboardID);
-                this.columnItemNumber = new global::System.Data.DataColumn("ItemNumber", typeof(short), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnItemNumber);
-                this.columnItemText = new global::System.Data.DataColumn("ItemText", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnItemText);
-                this.columnCommand = new global::System.Data.DataColumn("Command", typeof(short), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCommand);
-                this.columnArgument = new global::System.Data.DataColumn("Argument", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnArgument);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnSwitchboardID,
-                                this.columnItemNumber}, true));
-                this.columnSwitchboardID.AllowDBNull = false;
-                this.columnItemNumber.AllowDBNull = false;
-                this.columnItemText.MaxLength = 255;
-                this.columnArgument.MaxLength = 255;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public Switchboard_ItemsRow NewSwitchboard_ItemsRow() {
-                return ((Switchboard_ItemsRow)(this.NewRow()));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new Switchboard_ItemsRow(builder);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override global::System.Type GetRowType() {
-                return typeof(Switchboard_ItemsRow);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanged(e);
-                if ((this.Switchboard_ItemsRowChanged != null)) {
-                    this.Switchboard_ItemsRowChanged(this, new Switchboard_ItemsRowChangeEvent(((Switchboard_ItemsRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanging(e);
-                if ((this.Switchboard_ItemsRowChanging != null)) {
-                    this.Switchboard_ItemsRowChanging(this, new Switchboard_ItemsRowChangeEvent(((Switchboard_ItemsRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleted(e);
-                if ((this.Switchboard_ItemsRowDeleted != null)) {
-                    this.Switchboard_ItemsRowDeleted(this, new Switchboard_ItemsRowChangeEvent(((Switchboard_ItemsRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleting(e);
-                if ((this.Switchboard_ItemsRowDeleting != null)) {
-                    this.Switchboard_ItemsRowDeleting(this, new Switchboard_ItemsRowChangeEvent(((Switchboard_ItemsRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void RemoveSwitchboard_ItemsRow(Switchboard_ItemsRow row) {
-                this.Rows.Remove(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
-                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                Baza_edytowanaDataSet ds = new Baza_edytowanaDataSet();
-                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
-                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
-                any1.MinOccurs = new decimal(0);
-                any1.MaxOccurs = decimal.MaxValue;
-                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any1);
-                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
-                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
-                any2.MinOccurs = new decimal(1);
-                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any2);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute1.Name = "namespace";
-                attribute1.FixedValue = ds.Namespace;
-                type.Attributes.Add(attribute1);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "Switchboard_ItemsDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -1963,7 +1631,7 @@ namespace WindowsFormsApp1 {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                Baza_edytowanaDataSet ds = new Baza_edytowanaDataSet();
+                _Baza_danych__accdb1_nowaDataSet ds = new _Baza_danych__accdb1_nowaDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -2097,22 +1765,6 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int Specjalizcja {
-                get {
-                    try {
-                        return ((int)(this[this.tableLekarz.SpecjalizcjaColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Specjalizcja\' in table \'Lekarz\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableLekarz.SpecjalizcjaColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public decimal Wartość_wizyty {
                 get {
                     try {
@@ -2129,12 +1781,49 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public SpecjalizacjaRow SpecjalizacjaRow {
+            public string Specjalizacja {
                 get {
-                    return ((SpecjalizacjaRow)(this.GetParentRow(this.Table.ParentRelations["SpecjalizacjeLekarze"])));
+                    try {
+                        return ((string)(this[this.tableLekarz.SpecjalizacjaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Specjalizacja\' in table \'Lekarz\' is DBNull.", e);
+                    }
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["SpecjalizacjeLekarze"]);
+                    this[this.tableLekarz.SpecjalizacjaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Dodatkowe_informacje {
+                get {
+                    try {
+                        return ((string)(this[this.tableLekarz.Dodatkowe_informacjeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Dodatkowe informacje\' in table \'Lekarz\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableLekarz.Dodatkowe_informacjeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Cennik_usług {
+                get {
+                    try {
+                        return ((string)(this[this.tableLekarz.Cennik_usługColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Cennik usług\' in table \'Lekarz\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableLekarz.Cennik_usługColumn] = value;
                 }
             }
             
@@ -2176,18 +1865,6 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsSpecjalizcjaNull() {
-                return this.IsNull(this.tableLekarz.SpecjalizcjaColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetSpecjalizcjaNull() {
-                this[this.tableLekarz.SpecjalizcjaColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsWartość_wizytyNull() {
                 return this.IsNull(this.tableLekarz.Wartość_wizytyColumn);
             }
@@ -2196,6 +1873,42 @@ namespace WindowsFormsApp1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetWartość_wizytyNull() {
                 this[this.tableLekarz.Wartość_wizytyColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsSpecjalizacjaNull() {
+                return this.IsNull(this.tableLekarz.SpecjalizacjaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetSpecjalizacjaNull() {
+                this[this.tableLekarz.SpecjalizacjaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsDodatkowe_informacjeNull() {
+                return this.IsNull(this.tableLekarz.Dodatkowe_informacjeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetDodatkowe_informacjeNull() {
+                this[this.tableLekarz.Dodatkowe_informacjeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsCennik_usługNull() {
+                return this.IsNull(this.tableLekarz.Cennik_usługColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetCennik_usługNull() {
+                this[this.tableLekarz.Cennik_usługColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2317,17 +2030,17 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Haslo {
+            public string Hasło {
                 get {
                     try {
-                        return ((string)(this[this.tablePacjent.HasloColumn]));
+                        return ((string)(this[this.tablePacjent.HasłoColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Haslo\' in table \'Pacjent\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Hasło\' in table \'Pacjent\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablePacjent.HasloColumn] = value;
+                    this[this.tablePacjent.HasłoColumn] = value;
                 }
             }
             
@@ -2393,14 +2106,14 @@ namespace WindowsFormsApp1 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsHasloNull() {
-                return this.IsNull(this.tablePacjent.HasloColumn);
+            public bool IsHasłoNull() {
+                return this.IsNull(this.tablePacjent.HasłoColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetHasloNull() {
-                this[this.tablePacjent.HasloColumn] = global::System.Convert.DBNull;
+            public void SetHasłoNull() {
+                this[this.tablePacjent.HasłoColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2466,138 +2179,6 @@ namespace WindowsFormsApp1 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetSpecjalizacjeNull() {
                 this[this.tableSpecjalizacja.SpecjalizacjeColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public LekarzRow[] GetLekarzRows() {
-                if ((this.Table.ChildRelations["SpecjalizacjeLekarze"] == null)) {
-                    return new LekarzRow[0];
-                }
-                else {
-                    return ((LekarzRow[])(base.GetChildRows(this.Table.ChildRelations["SpecjalizacjeLekarze"])));
-                }
-            }
-        }
-        
-        /// <summary>
-        ///Represents strongly named DataRow class.
-        ///</summary>
-        public partial class Switchboard_ItemsRow : global::System.Data.DataRow {
-            
-            private Switchboard_ItemsDataTable tableSwitchboard_Items;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal Switchboard_ItemsRow(global::System.Data.DataRowBuilder rb) : 
-                    base(rb) {
-                this.tableSwitchboard_Items = ((Switchboard_ItemsDataTable)(this.Table));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int SwitchboardID {
-                get {
-                    return ((int)(this[this.tableSwitchboard_Items.SwitchboardIDColumn]));
-                }
-                set {
-                    this[this.tableSwitchboard_Items.SwitchboardIDColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public short ItemNumber {
-                get {
-                    return ((short)(this[this.tableSwitchboard_Items.ItemNumberColumn]));
-                }
-                set {
-                    this[this.tableSwitchboard_Items.ItemNumberColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string ItemText {
-                get {
-                    try {
-                        return ((string)(this[this.tableSwitchboard_Items.ItemTextColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'ItemText\' in table \'Switchboard Items\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableSwitchboard_Items.ItemTextColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public short Command {
-                get {
-                    try {
-                        return ((short)(this[this.tableSwitchboard_Items.CommandColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Command\' in table \'Switchboard Items\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableSwitchboard_Items.CommandColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Argument {
-                get {
-                    try {
-                        return ((string)(this[this.tableSwitchboard_Items.ArgumentColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Argument\' in table \'Switchboard Items\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableSwitchboard_Items.ArgumentColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsItemTextNull() {
-                return this.IsNull(this.tableSwitchboard_Items.ItemTextColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetItemTextNull() {
-                this[this.tableSwitchboard_Items.ItemTextColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsCommandNull() {
-                return this.IsNull(this.tableSwitchboard_Items.CommandColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetCommandNull() {
-                this[this.tableSwitchboard_Items.CommandColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsArgumentNull() {
-                return this.IsNull(this.tableSwitchboard_Items.ArgumentColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetArgumentNull() {
-                this[this.tableSwitchboard_Items.ArgumentColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -2839,40 +2420,6 @@ namespace WindowsFormsApp1 {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public class Switchboard_ItemsRowChangeEvent : global::System.EventArgs {
-            
-            private Switchboard_ItemsRow eventRow;
-            
-            private global::System.Data.DataRowAction eventAction;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public Switchboard_ItemsRowChangeEvent(Switchboard_ItemsRow row, global::System.Data.DataRowAction action) {
-                this.eventRow = row;
-                this.eventAction = action;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public Switchboard_ItemsRow Row {
-                get {
-                    return this.eventRow;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataRowAction Action {
-                get {
-                    return this.eventAction;
-                }
-            }
-        }
-        
-        /// <summary>
-        ///Row event argument class
-        ///</summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public class WizytaRowChangeEvent : global::System.EventArgs {
             
             private WizytaRow eventRow;
@@ -2904,7 +2451,7 @@ namespace WindowsFormsApp1 {
         }
     }
 }
-namespace WindowsFormsApp1.Baza_edytowanaDataSetTableAdapters {
+namespace WindowsFormsApp1._Baza_danych__accdb1_nowaDataSetTableAdapters {
     
     
     /// <summary>
@@ -3032,12 +2579,14 @@ namespace WindowsFormsApp1.Baza_edytowanaDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("Nazwisko lekarza", "Nazwisko lekarza");
             tableMapping.ColumnMappings.Add("Imię lekarza", "Imię lekarza");
             tableMapping.ColumnMappings.Add("Wiek", "Wiek");
-            tableMapping.ColumnMappings.Add("Specjalizcja", "Specjalizcja");
             tableMapping.ColumnMappings.Add("Wartość wizyty", "Wartość wizyty");
+            tableMapping.ColumnMappings.Add("Specjalizacja", "Specjalizacja");
+            tableMapping.ColumnMappings.Add("Dodatkowe informacje", "Dodatkowe informacje");
+            tableMapping.ColumnMappings.Add("Cennik usług", "Cennik usług");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `Lekarz` WHERE ((`Identyfikator lekarza` = ?) AND ((? = 1 AND `Nazwisko lekarza` IS NULL) OR (`Nazwisko lekarza` = ?)) AND ((? = 1 AND `Imię lekarza` IS NULL) OR (`Imię lekarza` = ?)) AND ((? = 1 AND `Wiek` IS NULL) OR (`Wiek` = ?)) AND ((? = 1 AND `Specjalizcja` IS NULL) OR (`Specjalizcja` = ?)) AND ((? = 1 AND `Wartość wizyty` IS NULL) OR (`Wartość wizyty` = ?)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `Lekarz` WHERE ((`Identyfikator lekarza` = ?) AND ((? = 1 AND `Nazwisko lekarza` IS NULL) OR (`Nazwisko lekarza` = ?)) AND ((? = 1 AND `Imię lekarza` IS NULL) OR (`Imię lekarza` = ?)) AND ((? = 1 AND `Wiek` IS NULL) OR (`Wiek` = ?)) AND ((? = 1 AND `Wartość wizyty` IS NULL) OR (`Wartość wizyty` = ?)) AND ((? = 1 AND `Specjalizacja` IS NULL) OR (`Specjalizacja` = ?)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Identyfikator_lekarza", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Identyfikator lekarza", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Nazwisko_lekarza", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Nazwisko lekarza", global::System.Data.DataRowVersion.Original, true, null));
@@ -3046,29 +2595,34 @@ namespace WindowsFormsApp1.Baza_edytowanaDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Imię_lekarza", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Imię lekarza", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Wiek", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Wiek", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Wiek", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Wiek", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Specjalizcja", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Specjalizcja", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Specjalizcja", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Specjalizcja", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Wartość_wizyty", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Wartość wizyty", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Wartość_wizyty", global::System.Data.OleDb.OleDbType.Currency, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Wartość wizyty", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Specjalizacja", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Specjalizacja", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Specjalizacja", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Specjalizacja", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO `Lekarz` (`Nazwisko lekarza`, `Imię lekarza`, `Wiek`, `Specjalizcja`," +
-                " `Wartość wizyty`) VALUES (?, ?, ?, ?, ?)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO `Lekarz` (`Nazwisko lekarza`, `Imię lekarza`, `Wiek`, `Wartość wizyty" +
+                "`, `Specjalizacja`, `Dodatkowe informacje`, `Cennik usług`) VALUES (?, ?, ?, ?, " +
+                "?, ?, ?)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Nazwisko_lekarza", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Nazwisko lekarza", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Imię_lekarza", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Imię lekarza", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Wiek", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Wiek", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Specjalizcja", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Specjalizcja", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Wartość_wizyty", global::System.Data.OleDb.OleDbType.Currency, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Wartość wizyty", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Specjalizacja", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Specjalizacja", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Dodatkowe_informacje", global::System.Data.OleDb.OleDbType.LongVarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Dodatkowe informacje", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Cennik_usług", global::System.Data.OleDb.OleDbType.LongVarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Cennik usług", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE `Lekarz` SET `Nazwisko lekarza` = ?, `Imię lekarza` = ?, `Wiek` = ?, `Specjalizcja` = ?, `Wartość wizyty` = ? WHERE ((`Identyfikator lekarza` = ?) AND ((? = 1 AND `Nazwisko lekarza` IS NULL) OR (`Nazwisko lekarza` = ?)) AND ((? = 1 AND `Imię lekarza` IS NULL) OR (`Imię lekarza` = ?)) AND ((? = 1 AND `Wiek` IS NULL) OR (`Wiek` = ?)) AND ((? = 1 AND `Specjalizcja` IS NULL) OR (`Specjalizcja` = ?)) AND ((? = 1 AND `Wartość wizyty` IS NULL) OR (`Wartość wizyty` = ?)))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE `Lekarz` SET `Nazwisko lekarza` = ?, `Imię lekarza` = ?, `Wiek` = ?, `Wartość wizyty` = ?, `Specjalizacja` = ?, `Dodatkowe informacje` = ?, `Cennik usług` = ? WHERE ((`Identyfikator lekarza` = ?) AND ((? = 1 AND `Nazwisko lekarza` IS NULL) OR (`Nazwisko lekarza` = ?)) AND ((? = 1 AND `Imię lekarza` IS NULL) OR (`Imię lekarza` = ?)) AND ((? = 1 AND `Wiek` IS NULL) OR (`Wiek` = ?)) AND ((? = 1 AND `Wartość wizyty` IS NULL) OR (`Wartość wizyty` = ?)) AND ((? = 1 AND `Specjalizacja` IS NULL) OR (`Specjalizacja` = ?)))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Nazwisko_lekarza", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Nazwisko lekarza", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Imię_lekarza", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Imię lekarza", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Wiek", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Wiek", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Specjalizcja", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Specjalizcja", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Wartość_wizyty", global::System.Data.OleDb.OleDbType.Currency, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Wartość wizyty", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Specjalizacja", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Specjalizacja", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Dodatkowe_informacje", global::System.Data.OleDb.OleDbType.LongVarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Dodatkowe informacje", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Cennik_usług", global::System.Data.OleDb.OleDbType.LongVarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Cennik usług", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Identyfikator_lekarza", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Identyfikator lekarza", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Nazwisko_lekarza", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Nazwisko lekarza", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Nazwisko_lekarza", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Nazwisko lekarza", global::System.Data.DataRowVersion.Original, false, null));
@@ -3076,17 +2630,17 @@ namespace WindowsFormsApp1.Baza_edytowanaDataSetTableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Imię_lekarza", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Imię lekarza", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Wiek", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Wiek", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Wiek", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Wiek", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Specjalizcja", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Specjalizcja", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Specjalizcja", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Specjalizcja", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Wartość_wizyty", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Wartość wizyty", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Wartość_wizyty", global::System.Data.OleDb.OleDbType.Currency, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Wartość wizyty", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Specjalizacja", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Specjalizacja", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Specjalizacja", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Specjalizacja", global::System.Data.DataRowVersion.Original, false, null));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.OleDb.OleDbConnection();
-            this._connection.ConnectionString = global::WindowsFormsApp1.Properties.Settings.Default.Baza_edytowanaConnectionString;
+            this._connection.ConnectionString = global::WindowsFormsApp1.Properties.Settings.Default.Baza_danych__accdb1_nowaConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3095,8 +2649,8 @@ namespace WindowsFormsApp1.Baza_edytowanaDataSetTableAdapters {
             this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT [Identyfikator lekarza], [Nazwisko lekarza], [Imię lekarza], Wiek, Specjal" +
-                "izcja, [Wartość wizyty] FROM Lekarz";
+            this._commandCollection[0].CommandText = "SELECT [Identyfikator lekarza], [Nazwisko lekarza], [Imię lekarza], Wiek, [Wartoś" +
+                "ć wizyty], Specjalizacja, [Dodatkowe informacje], [Cennik usług] FROM Lekarz";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -3104,7 +2658,7 @@ namespace WindowsFormsApp1.Baza_edytowanaDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(Baza_edytowanaDataSet.LekarzDataTable dataTable) {
+        public virtual int Fill(_Baza_danych__accdb1_nowaDataSet.LekarzDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -3117,9 +2671,9 @@ namespace WindowsFormsApp1.Baza_edytowanaDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual Baza_edytowanaDataSet.LekarzDataTable GetData() {
+        public virtual _Baza_danych__accdb1_nowaDataSet.LekarzDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            Baza_edytowanaDataSet.LekarzDataTable dataTable = new Baza_edytowanaDataSet.LekarzDataTable();
+            _Baza_danych__accdb1_nowaDataSet.LekarzDataTable dataTable = new _Baza_danych__accdb1_nowaDataSet.LekarzDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -3127,14 +2681,14 @@ namespace WindowsFormsApp1.Baza_edytowanaDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(Baza_edytowanaDataSet.LekarzDataTable dataTable) {
+        public virtual int Update(_Baza_danych__accdb1_nowaDataSet.LekarzDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(Baza_edytowanaDataSet dataSet) {
+        public virtual int Update(_Baza_danych__accdb1_nowaDataSet dataSet) {
             return this.Adapter.Update(dataSet, "Lekarz");
         }
         
@@ -3157,7 +2711,7 @@ namespace WindowsFormsApp1.Baza_edytowanaDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_Identyfikator_lekarza, string Original_Nazwisko_lekarza, string Original_Imię_lekarza, global::System.Nullable<int> Original_Wiek, global::System.Nullable<int> Original_Specjalizcja, global::System.Nullable<decimal> Original_Wartość_wizyty) {
+        public virtual int Delete(int Original_Identyfikator_lekarza, string Original_Nazwisko_lekarza, string Original_Imię_lekarza, global::System.Nullable<int> Original_Wiek, global::System.Nullable<decimal> Original_Wartość_wizyty, string Original_Specjalizacja) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Identyfikator_lekarza));
             if ((Original_Nazwisko_lekarza == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
@@ -3183,21 +2737,21 @@ namespace WindowsFormsApp1.Baza_edytowanaDataSetTableAdapters {
                 this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
-            if ((Original_Specjalizcja.HasValue == true)) {
+            if ((Original_Wartość_wizyty.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((int)(Original_Specjalizcja.Value));
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((decimal)(Original_Wartość_wizyty.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
-            if ((Original_Wartość_wizyty.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[10].Value = ((decimal)(Original_Wartość_wizyty.Value));
-            }
-            else {
+            if ((Original_Specjalizacja == null)) {
                 this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[10].Value = ((string)(Original_Specjalizacja));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -3219,7 +2773,7 @@ namespace WindowsFormsApp1.Baza_edytowanaDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string Nazwisko_lekarza, string Imię_lekarza, global::System.Nullable<int> Wiek, global::System.Nullable<int> Specjalizcja, global::System.Nullable<decimal> Wartość_wizyty) {
+        public virtual int Insert(string Nazwisko_lekarza, string Imię_lekarza, global::System.Nullable<int> Wiek, global::System.Nullable<decimal> Wartość_wizyty, string Specjalizacja, string Dodatkowe_informacje, string Cennik_usług) {
             if ((Nazwisko_lekarza == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -3238,17 +2792,29 @@ namespace WindowsFormsApp1.Baza_edytowanaDataSetTableAdapters {
             else {
                 this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            if ((Specjalizcja.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((int)(Specjalizcja.Value));
+            if ((Wartość_wizyty.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((decimal)(Wartość_wizyty.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
-            if ((Wartość_wizyty.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((decimal)(Wartość_wizyty.Value));
+            if ((Specjalizacja == null)) {
+                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(Specjalizacja));
+            }
+            if ((Dodatkowe_informacje == null)) {
+                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(Dodatkowe_informacje));
+            }
+            if ((Cennik_usług == null)) {
+                this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(Cennik_usług));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -3270,7 +2836,7 @@ namespace WindowsFormsApp1.Baza_edytowanaDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Nazwisko_lekarza, string Imię_lekarza, global::System.Nullable<int> Wiek, global::System.Nullable<int> Specjalizcja, global::System.Nullable<decimal> Wartość_wizyty, int Original_Identyfikator_lekarza, string Original_Nazwisko_lekarza, string Original_Imię_lekarza, global::System.Nullable<int> Original_Wiek, global::System.Nullable<int> Original_Specjalizcja, global::System.Nullable<decimal> Original_Wartość_wizyty) {
+        public virtual int Update(string Nazwisko_lekarza, string Imię_lekarza, global::System.Nullable<int> Wiek, global::System.Nullable<decimal> Wartość_wizyty, string Specjalizacja, string Dodatkowe_informacje, string Cennik_usług, int Original_Identyfikator_lekarza, string Original_Nazwisko_lekarza, string Original_Imię_lekarza, global::System.Nullable<int> Original_Wiek, global::System.Nullable<decimal> Original_Wartość_wizyty, string Original_Specjalizacja) {
             if ((Nazwisko_lekarza == null)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -3289,46 +2855,50 @@ namespace WindowsFormsApp1.Baza_edytowanaDataSetTableAdapters {
             else {
                 this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            if ((Specjalizcja.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Specjalizcja.Value));
+            if ((Wartość_wizyty.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((decimal)(Wartość_wizyty.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
-            if ((Wartość_wizyty.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((decimal)(Wartość_wizyty.Value));
-            }
-            else {
+            if ((Specjalizacja == null)) {
                 this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_Identyfikator_lekarza));
-            if ((Original_Nazwisko_lekarza == null)) {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
+            else {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Specjalizacja));
+            }
+            if ((Dodatkowe_informacje == null)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_Nazwisko_lekarza));
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Dodatkowe_informacje));
             }
-            if ((Original_Imię_lekarza == null)) {
+            if ((Cennik_usług == null)) {
+                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Cennik_usług));
+            }
+            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_Identyfikator_lekarza));
+            if ((Original_Nazwisko_lekarza == null)) {
                 this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_Imię_lekarza));
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_Nazwisko_lekarza));
             }
-            if ((Original_Wiek.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(Original_Wiek.Value));
-            }
-            else {
+            if ((Original_Imię_lekarza == null)) {
                 this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
             }
-            if ((Original_Specjalizcja.HasValue == true)) {
+            else {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_Imię_lekarza));
+            }
+            if ((Original_Wiek.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(Original_Specjalizcja.Value));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(Original_Wiek.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
@@ -3341,6 +2911,14 @@ namespace WindowsFormsApp1.Baza_edytowanaDataSetTableAdapters {
             else {
                 this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Specjalizacja == null)) {
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(Original_Specjalizacja));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -3486,11 +3064,11 @@ namespace WindowsFormsApp1.Baza_edytowanaDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("Data urodzenia", "Data urodzenia");
             tableMapping.ColumnMappings.Add("Adres", "Adres");
             tableMapping.ColumnMappings.Add("Email", "Email");
-            tableMapping.ColumnMappings.Add("Haslo", "Haslo");
+            tableMapping.ColumnMappings.Add("Hasło", "Hasło");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `Pacjent` WHERE ((`Identyfikator pacjenta` = ?) AND ((? = 1 AND `Nazwisko pacjenta` IS NULL) OR (`Nazwisko pacjenta` = ?)) AND ((? = 1 AND `Imię pacjenta` IS NULL) OR (`Imię pacjenta` = ?)) AND ((? = 1 AND `Data urodzenia` IS NULL) OR (`Data urodzenia` = ?)) AND ((? = 1 AND `Adres` IS NULL) OR (`Adres` = ?)) AND ((? = 1 AND `Email` IS NULL) OR (`Email` = ?)) AND ((? = 1 AND `Haslo` IS NULL) OR (`Haslo` = ?)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `Pacjent` WHERE ((`Identyfikator pacjenta` = ?) AND ((? = 1 AND `Nazwisko pacjenta` IS NULL) OR (`Nazwisko pacjenta` = ?)) AND ((? = 1 AND `Imię pacjenta` IS NULL) OR (`Imię pacjenta` = ?)) AND ((? = 1 AND `Data urodzenia` IS NULL) OR (`Data urodzenia` = ?)) AND ((? = 1 AND `Adres` IS NULL) OR (`Adres` = ?)) AND ((? = 1 AND `Email` IS NULL) OR (`Email` = ?)) AND ((? = 1 AND `Hasło` IS NULL) OR (`Hasło` = ?)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Identyfikator_pacjenta", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Identyfikator pacjenta", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Nazwisko_pacjenta", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Nazwisko pacjenta", global::System.Data.DataRowVersion.Original, true, null));
@@ -3503,29 +3081,29 @@ namespace WindowsFormsApp1.Baza_edytowanaDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Adres", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Adres", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Email", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Email", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Email", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Email", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Haslo", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Haslo", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Haslo", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Haslo", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Hasło", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Hasło", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Hasło", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Hasło", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = "INSERT INTO `Pacjent` (`Nazwisko pacjenta`, `Imię pacjenta`, `Data urodzenia`, `A" +
-                "dres`, `Email`, `Haslo`) VALUES (?, ?, ?, ?, ?, ?)";
+                "dres`, `Email`, `Hasło`) VALUES (?, ?, ?, ?, ?, ?)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Nazwisko_pacjenta", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Nazwisko pacjenta", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Imię_pacjenta", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Imię pacjenta", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Data_urodzenia", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Data urodzenia", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Adres", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Adres", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Email", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Email", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Haslo", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Haslo", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Hasło", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Hasło", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE `Pacjent` SET `Nazwisko pacjenta` = ?, `Imię pacjenta` = ?, `Data urodzenia` = ?, `Adres` = ?, `Email` = ?, `Haslo` = ? WHERE ((`Identyfikator pacjenta` = ?) AND ((? = 1 AND `Nazwisko pacjenta` IS NULL) OR (`Nazwisko pacjenta` = ?)) AND ((? = 1 AND `Imię pacjenta` IS NULL) OR (`Imię pacjenta` = ?)) AND ((? = 1 AND `Data urodzenia` IS NULL) OR (`Data urodzenia` = ?)) AND ((? = 1 AND `Adres` IS NULL) OR (`Adres` = ?)) AND ((? = 1 AND `Email` IS NULL) OR (`Email` = ?)) AND ((? = 1 AND `Haslo` IS NULL) OR (`Haslo` = ?)))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE `Pacjent` SET `Nazwisko pacjenta` = ?, `Imię pacjenta` = ?, `Data urodzenia` = ?, `Adres` = ?, `Email` = ?, `Hasło` = ? WHERE ((`Identyfikator pacjenta` = ?) AND ((? = 1 AND `Nazwisko pacjenta` IS NULL) OR (`Nazwisko pacjenta` = ?)) AND ((? = 1 AND `Imię pacjenta` IS NULL) OR (`Imię pacjenta` = ?)) AND ((? = 1 AND `Data urodzenia` IS NULL) OR (`Data urodzenia` = ?)) AND ((? = 1 AND `Adres` IS NULL) OR (`Adres` = ?)) AND ((? = 1 AND `Email` IS NULL) OR (`Email` = ?)) AND ((? = 1 AND `Hasło` IS NULL) OR (`Hasło` = ?)))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Nazwisko_pacjenta", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Nazwisko pacjenta", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Imię_pacjenta", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Imię pacjenta", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Data_urodzenia", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Data urodzenia", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Adres", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Adres", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Email", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Email", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Haslo", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Haslo", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Hasło", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Hasło", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Identyfikator_pacjenta", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Identyfikator pacjenta", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Nazwisko_pacjenta", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Nazwisko pacjenta", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Nazwisko_pacjenta", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Nazwisko pacjenta", global::System.Data.DataRowVersion.Original, false, null));
@@ -3537,15 +3115,15 @@ namespace WindowsFormsApp1.Baza_edytowanaDataSetTableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Adres", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Adres", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Email", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Email", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Email", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Email", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Haslo", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Haslo", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Haslo", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Haslo", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Hasło", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Hasło", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Hasło", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Hasło", global::System.Data.DataRowVersion.Original, false, null));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.OleDb.OleDbConnection();
-            this._connection.ConnectionString = global::WindowsFormsApp1.Properties.Settings.Default.Baza_edytowanaConnectionString;
+            this._connection.ConnectionString = global::WindowsFormsApp1.Properties.Settings.Default.Baza_danych__accdb1_nowaConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3555,7 +3133,7 @@ namespace WindowsFormsApp1.Baza_edytowanaDataSetTableAdapters {
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT [Identyfikator pacjenta], [Nazwisko pacjenta], [Imię pacjenta], [Data urod" +
-                "zenia], Adres, Email, Haslo FROM Pacjent";
+                "zenia], Adres, Email, Hasło FROM Pacjent";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -3563,7 +3141,7 @@ namespace WindowsFormsApp1.Baza_edytowanaDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(Baza_edytowanaDataSet.PacjentDataTable dataTable) {
+        public virtual int Fill(_Baza_danych__accdb1_nowaDataSet.PacjentDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -3576,9 +3154,9 @@ namespace WindowsFormsApp1.Baza_edytowanaDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual Baza_edytowanaDataSet.PacjentDataTable GetData() {
+        public virtual _Baza_danych__accdb1_nowaDataSet.PacjentDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            Baza_edytowanaDataSet.PacjentDataTable dataTable = new Baza_edytowanaDataSet.PacjentDataTable();
+            _Baza_danych__accdb1_nowaDataSet.PacjentDataTable dataTable = new _Baza_danych__accdb1_nowaDataSet.PacjentDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -3586,14 +3164,14 @@ namespace WindowsFormsApp1.Baza_edytowanaDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(Baza_edytowanaDataSet.PacjentDataTable dataTable) {
+        public virtual int Update(_Baza_danych__accdb1_nowaDataSet.PacjentDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(Baza_edytowanaDataSet dataSet) {
+        public virtual int Update(_Baza_danych__accdb1_nowaDataSet dataSet) {
             return this.Adapter.Update(dataSet, "Pacjent");
         }
         
@@ -3616,7 +3194,7 @@ namespace WindowsFormsApp1.Baza_edytowanaDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_Identyfikator_pacjenta, string Original_Nazwisko_pacjenta, string Original_Imię_pacjenta, global::System.Nullable<global::System.DateTime> Original_Data_urodzenia, string Original_Adres, string Original_Email, string Original_Haslo) {
+        public virtual int Delete(int Original_Identyfikator_pacjenta, string Original_Nazwisko_pacjenta, string Original_Imię_pacjenta, global::System.Nullable<global::System.DateTime> Original_Data_urodzenia, string Original_Adres, string Original_Email, string Original_Hasło) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Identyfikator_pacjenta));
             if ((Original_Nazwisko_pacjenta == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
@@ -3658,13 +3236,13 @@ namespace WindowsFormsApp1.Baza_edytowanaDataSetTableAdapters {
                 this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[10].Value = ((string)(Original_Email));
             }
-            if ((Original_Haslo == null)) {
+            if ((Original_Hasło == null)) {
                 this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[12].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[12].Value = ((string)(Original_Haslo));
+                this.Adapter.DeleteCommand.Parameters[12].Value = ((string)(Original_Hasło));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -3686,7 +3264,7 @@ namespace WindowsFormsApp1.Baza_edytowanaDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string Nazwisko_pacjenta, string Imię_pacjenta, global::System.Nullable<global::System.DateTime> Data_urodzenia, string Adres, string Email, string Haslo) {
+        public virtual int Insert(string Nazwisko_pacjenta, string Imię_pacjenta, global::System.Nullable<global::System.DateTime> Data_urodzenia, string Adres, string Email, string Hasło) {
             if ((Nazwisko_pacjenta == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -3717,11 +3295,11 @@ namespace WindowsFormsApp1.Baza_edytowanaDataSetTableAdapters {
             else {
                 this.Adapter.InsertCommand.Parameters[4].Value = ((string)(Email));
             }
-            if ((Haslo == null)) {
+            if ((Hasło == null)) {
                 this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(Haslo));
+                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(Hasło));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -3743,7 +3321,7 @@ namespace WindowsFormsApp1.Baza_edytowanaDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Nazwisko_pacjenta, string Imię_pacjenta, global::System.Nullable<global::System.DateTime> Data_urodzenia, string Adres, string Email, string Haslo, int Original_Identyfikator_pacjenta, string Original_Nazwisko_pacjenta, string Original_Imię_pacjenta, global::System.Nullable<global::System.DateTime> Original_Data_urodzenia, string Original_Adres, string Original_Email, string Original_Haslo) {
+        public virtual int Update(string Nazwisko_pacjenta, string Imię_pacjenta, global::System.Nullable<global::System.DateTime> Data_urodzenia, string Adres, string Email, string Hasło, int Original_Identyfikator_pacjenta, string Original_Nazwisko_pacjenta, string Original_Imię_pacjenta, global::System.Nullable<global::System.DateTime> Original_Data_urodzenia, string Original_Adres, string Original_Email, string Original_Hasło) {
             if ((Nazwisko_pacjenta == null)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -3774,11 +3352,11 @@ namespace WindowsFormsApp1.Baza_edytowanaDataSetTableAdapters {
             else {
                 this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Email));
             }
-            if ((Haslo == null)) {
+            if ((Hasło == null)) {
                 this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Haslo));
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Hasło));
             }
             this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_Identyfikator_pacjenta));
             if ((Original_Nazwisko_pacjenta == null)) {
@@ -3821,13 +3399,13 @@ namespace WindowsFormsApp1.Baza_edytowanaDataSetTableAdapters {
                 this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(0));
                 this.Adapter.UpdateCommand.Parameters[16].Value = ((string)(Original_Email));
             }
-            if ((Original_Haslo == null)) {
+            if ((Original_Hasło == null)) {
                 this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[18].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((string)(Original_Haslo));
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((string)(Original_Hasło));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -3998,7 +3576,7 @@ namespace WindowsFormsApp1.Baza_edytowanaDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.OleDb.OleDbConnection();
-            this._connection.ConnectionString = global::WindowsFormsApp1.Properties.Settings.Default.Baza_edytowanaConnectionString;
+            this._connection.ConnectionString = global::WindowsFormsApp1.Properties.Settings.Default.Baza_danych__accdb1_nowaConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4015,7 +3593,7 @@ namespace WindowsFormsApp1.Baza_edytowanaDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(Baza_edytowanaDataSet.SpecjalizacjaDataTable dataTable) {
+        public virtual int Fill(_Baza_danych__accdb1_nowaDataSet.SpecjalizacjaDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -4028,9 +3606,9 @@ namespace WindowsFormsApp1.Baza_edytowanaDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual Baza_edytowanaDataSet.SpecjalizacjaDataTable GetData() {
+        public virtual _Baza_danych__accdb1_nowaDataSet.SpecjalizacjaDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            Baza_edytowanaDataSet.SpecjalizacjaDataTable dataTable = new Baza_edytowanaDataSet.SpecjalizacjaDataTable();
+            _Baza_danych__accdb1_nowaDataSet.SpecjalizacjaDataTable dataTable = new _Baza_danych__accdb1_nowaDataSet.SpecjalizacjaDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -4038,14 +3616,14 @@ namespace WindowsFormsApp1.Baza_edytowanaDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(Baza_edytowanaDataSet.SpecjalizacjaDataTable dataTable) {
+        public virtual int Update(_Baza_danych__accdb1_nowaDataSet.SpecjalizacjaDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(Baza_edytowanaDataSet dataSet) {
+        public virtual int Update(_Baza_danych__accdb1_nowaDataSet dataSet) {
             return this.Adapter.Update(dataSet, "Specjalizacja");
         }
         
@@ -4155,452 +3733,6 @@ namespace WindowsFormsApp1.Baza_edytowanaDataSetTableAdapters {
                     this.Adapter.UpdateCommand.Connection.Close();
                 }
             }
-        }
-    }
-    
-    /// <summary>
-    ///Represents the connection and commands used to retrieve and save data.
-    ///</summary>
-    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
-    [global::System.ComponentModel.ToolboxItem(true)]
-    [global::System.ComponentModel.DataObjectAttribute(true)]
-    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
-        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
-    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class Switchboard_ItemsTableAdapter : global::System.ComponentModel.Component {
-        
-        private global::System.Data.OleDb.OleDbDataAdapter _adapter;
-        
-        private global::System.Data.OleDb.OleDbConnection _connection;
-        
-        private global::System.Data.OleDb.OleDbTransaction _transaction;
-        
-        private global::System.Data.OleDb.OleDbCommand[] _commandCollection;
-        
-        private bool _clearBeforeFill;
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public Switchboard_ItemsTableAdapter() {
-            this.ClearBeforeFill = true;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected internal global::System.Data.OleDb.OleDbDataAdapter Adapter {
-            get {
-                if ((this._adapter == null)) {
-                    this.InitAdapter();
-                }
-                return this._adapter;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        internal global::System.Data.OleDb.OleDbConnection Connection {
-            get {
-                if ((this._connection == null)) {
-                    this.InitConnection();
-                }
-                return this._connection;
-            }
-            set {
-                this._connection = value;
-                if ((this.Adapter.InsertCommand != null)) {
-                    this.Adapter.InsertCommand.Connection = value;
-                }
-                if ((this.Adapter.DeleteCommand != null)) {
-                    this.Adapter.DeleteCommand.Connection = value;
-                }
-                if ((this.Adapter.UpdateCommand != null)) {
-                    this.Adapter.UpdateCommand.Connection = value;
-                }
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    if ((this.CommandCollection[i] != null)) {
-                        ((global::System.Data.OleDb.OleDbCommand)(this.CommandCollection[i])).Connection = value;
-                    }
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        internal global::System.Data.OleDb.OleDbTransaction Transaction {
-            get {
-                return this._transaction;
-            }
-            set {
-                this._transaction = value;
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    this.CommandCollection[i].Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.DeleteCommand != null))) {
-                    this.Adapter.DeleteCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.InsertCommand != null))) {
-                    this.Adapter.InsertCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.UpdateCommand != null))) {
-                    this.Adapter.UpdateCommand.Transaction = this._transaction;
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected global::System.Data.OleDb.OleDbCommand[] CommandCollection {
-            get {
-                if ((this._commandCollection == null)) {
-                    this.InitCommandCollection();
-                }
-                return this._commandCollection;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public bool ClearBeforeFill {
-            get {
-                return this._clearBeforeFill;
-            }
-            set {
-                this._clearBeforeFill = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private void InitAdapter() {
-            this._adapter = new global::System.Data.OleDb.OleDbDataAdapter();
-            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
-            tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Switchboard Items";
-            tableMapping.ColumnMappings.Add("SwitchboardID", "SwitchboardID");
-            tableMapping.ColumnMappings.Add("ItemNumber", "ItemNumber");
-            tableMapping.ColumnMappings.Add("ItemText", "ItemText");
-            tableMapping.ColumnMappings.Add("Command", "Command");
-            tableMapping.ColumnMappings.Add("Argument", "Argument");
-            this._adapter.TableMappings.Add(tableMapping);
-            this._adapter.DeleteCommand = new global::System.Data.OleDb.OleDbCommand();
-            this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM `Switchboard Items` WHERE ((`SwitchboardID` = ?) AND (`ItemNumber` = " +
-                "?) AND ((? = 1 AND `ItemText` IS NULL) OR (`ItemText` = ?)) AND ((? = 1 AND `Com" +
-                "mand` IS NULL) OR (`Command` = ?)) AND ((? = 1 AND `Argument` IS NULL) OR (`Argu" +
-                "ment` = ?)))";
-            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_SwitchboardID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "SwitchboardID", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_ItemNumber", global::System.Data.OleDb.OleDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ItemNumber", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_ItemText", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ItemText", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_ItemText", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ItemText", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Command", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Command", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Command", global::System.Data.OleDb.OleDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Command", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Argument", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Argument", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Argument", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Argument", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
-            this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO `Switchboard Items` (`SwitchboardID`, `ItemNumber`, `ItemText`, `Comm" +
-                "and`, `Argument`) VALUES (?, ?, ?, ?, ?)";
-            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("SwitchboardID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "SwitchboardID", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("ItemNumber", global::System.Data.OleDb.OleDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ItemNumber", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("ItemText", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ItemText", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Command", global::System.Data.OleDb.OleDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Command", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Argument", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Argument", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand = new global::System.Data.OleDb.OleDbCommand();
-            this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE `Switchboard Items` SET `SwitchboardID` = ?, `ItemNumber` = ?, `ItemText` = ?, `Command` = ?, `Argument` = ? WHERE ((`SwitchboardID` = ?) AND (`ItemNumber` = ?) AND ((? = 1 AND `ItemText` IS NULL) OR (`ItemText` = ?)) AND ((? = 1 AND `Command` IS NULL) OR (`Command` = ?)) AND ((? = 1 AND `Argument` IS NULL) OR (`Argument` = ?)))";
-            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("SwitchboardID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "SwitchboardID", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("ItemNumber", global::System.Data.OleDb.OleDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ItemNumber", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("ItemText", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ItemText", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Command", global::System.Data.OleDb.OleDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Command", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Argument", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Argument", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_SwitchboardID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "SwitchboardID", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_ItemNumber", global::System.Data.OleDb.OleDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ItemNumber", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_ItemText", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ItemText", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_ItemText", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ItemText", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Command", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Command", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Command", global::System.Data.OleDb.OleDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Command", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Argument", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Argument", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Argument", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Argument", global::System.Data.DataRowVersion.Original, false, null));
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private void InitConnection() {
-            this._connection = new global::System.Data.OleDb.OleDbConnection();
-            this._connection.ConnectionString = global::WindowsFormsApp1.Properties.Settings.Default.Baza_edytowanaConnectionString;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
-            this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
-            this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT SwitchboardID, ItemNumber, ItemText, Command, Argument FROM [Switchboard I" +
-                "tems]";
-            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(Baza_edytowanaDataSet.Switchboard_ItemsDataTable dataTable) {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual Baza_edytowanaDataSet.Switchboard_ItemsDataTable GetData() {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            Baza_edytowanaDataSet.Switchboard_ItemsDataTable dataTable = new Baza_edytowanaDataSet.Switchboard_ItemsDataTable();
-            this.Adapter.Fill(dataTable);
-            return dataTable;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(Baza_edytowanaDataSet.Switchboard_ItemsDataTable dataTable) {
-            return this.Adapter.Update(dataTable);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(Baza_edytowanaDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "Switchboard Items");
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow dataRow) {
-            return this.Adapter.Update(new global::System.Data.DataRow[] {
-                        dataRow});
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow[] dataRows) {
-            return this.Adapter.Update(dataRows);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(global::System.Nullable<int> Original_SwitchboardID, global::System.Nullable<short> Original_ItemNumber, string Original_ItemText, global::System.Nullable<short> Original_Command, string Original_Argument) {
-            if ((Original_SwitchboardID.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_SwitchboardID.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[0].Value = global::System.DBNull.Value;
-            }
-            if ((Original_ItemNumber.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((short)(Original_ItemNumber.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            if ((Original_ItemText == null)) {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[3].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_ItemText));
-            }
-            if ((Original_Command.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((short)(Original_Command.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[5].Value = global::System.DBNull.Value;
-            }
-            if ((Original_Argument == null)) {
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[7].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[7].Value = ((string)(Original_Argument));
-            }
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
-            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.DeleteCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.DeleteCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(global::System.Nullable<int> SwitchboardID, global::System.Nullable<short> ItemNumber, string ItemText, global::System.Nullable<short> Command1, string Argument) {
-            if ((SwitchboardID.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((int)(SwitchboardID.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
-            }
-            if ((ItemNumber.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((short)(ItemNumber.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            if ((ItemText == null)) {
-                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(ItemText));
-            }
-            if ((Command1.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((short)(Command1.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
-            }
-            if ((Argument == null)) {
-                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(Argument));
-            }
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
-            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.InsertCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.InsertCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(global::System.Nullable<int> SwitchboardID, global::System.Nullable<short> ItemNumber, string ItemText, global::System.Nullable<short> Command1, string Argument, global::System.Nullable<int> Original_SwitchboardID, global::System.Nullable<short> Original_ItemNumber, string Original_ItemText, global::System.Nullable<short> Original_Command, string Original_Argument) {
-            if ((SwitchboardID.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(SwitchboardID.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
-            }
-            if ((ItemNumber.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((short)(ItemNumber.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            if ((ItemText == null)) {
-                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(ItemText));
-            }
-            if ((Command1.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((short)(Command1.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
-            }
-            if ((Argument == null)) {
-                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Argument));
-            }
-            if ((Original_SwitchboardID.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_SwitchboardID.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
-            }
-            if ((Original_ItemNumber.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((short)(Original_ItemNumber.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
-            }
-            if ((Original_ItemText == null)) {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_ItemText));
-            }
-            if ((Original_Command.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((short)(Original_Command.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
-            }
-            if ((Original_Argument == null)) {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Original_Argument));
-            }
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
-            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.UpdateCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.UpdateCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string ItemText, global::System.Nullable<short> Command1, string Argument, global::System.Nullable<int> Original_SwitchboardID, global::System.Nullable<short> Original_ItemNumber, string Original_ItemText, global::System.Nullable<short> Original_Command, string Original_Argument) {
-            return this.Update(Original_SwitchboardID, Original_ItemNumber, ItemText, Command1, Argument, Original_SwitchboardID, Original_ItemNumber, Original_ItemText, Original_Command, Original_Argument);
         }
     }
     
@@ -4770,7 +3902,7 @@ namespace WindowsFormsApp1.Baza_edytowanaDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.OleDb.OleDbConnection();
-            this._connection.ConnectionString = global::WindowsFormsApp1.Properties.Settings.Default.Baza_edytowanaConnectionString;
+            this._connection.ConnectionString = global::WindowsFormsApp1.Properties.Settings.Default.Baza_danych__accdb1_nowaConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4787,7 +3919,7 @@ namespace WindowsFormsApp1.Baza_edytowanaDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(Baza_edytowanaDataSet.WizytaDataTable dataTable) {
+        public virtual int Fill(_Baza_danych__accdb1_nowaDataSet.WizytaDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -4800,9 +3932,9 @@ namespace WindowsFormsApp1.Baza_edytowanaDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual Baza_edytowanaDataSet.WizytaDataTable GetData() {
+        public virtual _Baza_danych__accdb1_nowaDataSet.WizytaDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            Baza_edytowanaDataSet.WizytaDataTable dataTable = new Baza_edytowanaDataSet.WizytaDataTable();
+            _Baza_danych__accdb1_nowaDataSet.WizytaDataTable dataTable = new _Baza_danych__accdb1_nowaDataSet.WizytaDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -4810,14 +3942,14 @@ namespace WindowsFormsApp1.Baza_edytowanaDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(Baza_edytowanaDataSet.WizytaDataTable dataTable) {
+        public virtual int Update(_Baza_danych__accdb1_nowaDataSet.WizytaDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(Baza_edytowanaDataSet dataSet) {
+        public virtual int Update(_Baza_danych__accdb1_nowaDataSet dataSet) {
             return this.Adapter.Update(dataSet, "Wizyta");
         }
         
@@ -5004,8 +4136,6 @@ namespace WindowsFormsApp1.Baza_edytowanaDataSetTableAdapters {
         
         private SpecjalizacjaTableAdapter _specjalizacjaTableAdapter;
         
-        private Switchboard_ItemsTableAdapter _switchboard_ItemsTableAdapter;
-        
         private WizytaTableAdapter _wizytaTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
@@ -5070,20 +4200,6 @@ namespace WindowsFormsApp1.Baza_edytowanaDataSetTableAdapters {
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public Switchboard_ItemsTableAdapter Switchboard_ItemsTableAdapter {
-            get {
-                return this._switchboard_ItemsTableAdapter;
-            }
-            set {
-                this._switchboard_ItemsTableAdapter = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
-            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
-            "a", "System.Drawing.Design.UITypeEditor")]
         public WizytaTableAdapter WizytaTableAdapter {
             get {
                 return this._wizytaTableAdapter;
@@ -5124,10 +4240,6 @@ namespace WindowsFormsApp1.Baza_edytowanaDataSetTableAdapters {
                             && (this._specjalizacjaTableAdapter.Connection != null))) {
                     return this._specjalizacjaTableAdapter.Connection;
                 }
-                if (((this._switchboard_ItemsTableAdapter != null) 
-                            && (this._switchboard_ItemsTableAdapter.Connection != null))) {
-                    return this._switchboard_ItemsTableAdapter.Connection;
-                }
                 if (((this._wizytaTableAdapter != null) 
                             && (this._wizytaTableAdapter.Connection != null))) {
                     return this._wizytaTableAdapter.Connection;
@@ -5154,9 +4266,6 @@ namespace WindowsFormsApp1.Baza_edytowanaDataSetTableAdapters {
                 if ((this._specjalizacjaTableAdapter != null)) {
                     count = (count + 1);
                 }
-                if ((this._switchboard_ItemsTableAdapter != null)) {
-                    count = (count + 1);
-                }
                 if ((this._wizytaTableAdapter != null)) {
                     count = (count + 1);
                 }
@@ -5169,17 +4278,8 @@ namespace WindowsFormsApp1.Baza_edytowanaDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateUpdatedRows(Baza_edytowanaDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(_Baza_danych__accdb1_nowaDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._specjalizacjaTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Specjalizacja.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._specjalizacjaTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
             if ((this._lekarzTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.Lekarz.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
@@ -5198,12 +4298,12 @@ namespace WindowsFormsApp1.Baza_edytowanaDataSetTableAdapters {
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._switchboard_ItemsTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Switchboard_Items.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._specjalizacjaTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Specjalizacja.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._switchboard_ItemsTableAdapter.Update(updatedRows));
+                    result = (result + this._specjalizacjaTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -5224,16 +4324,8 @@ namespace WindowsFormsApp1.Baza_edytowanaDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateInsertedRows(Baza_edytowanaDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(_Baza_danych__accdb1_nowaDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._specjalizacjaTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Specjalizacja.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._specjalizacjaTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             if ((this._lekarzTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.Lekarz.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
@@ -5250,11 +4342,11 @@ namespace WindowsFormsApp1.Baza_edytowanaDataSetTableAdapters {
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._switchboard_ItemsTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Switchboard_Items.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._specjalizacjaTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Specjalizacja.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._switchboard_ItemsTableAdapter.Update(addedRows));
+                    result = (result + this._specjalizacjaTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -5274,7 +4366,7 @@ namespace WindowsFormsApp1.Baza_edytowanaDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateDeletedRows(Baza_edytowanaDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(_Baza_danych__accdb1_nowaDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             if ((this._wizytaTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.Wizyta.Select(null, null, global::System.Data.DataViewRowState.Deleted);
@@ -5284,11 +4376,11 @@ namespace WindowsFormsApp1.Baza_edytowanaDataSetTableAdapters {
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._switchboard_ItemsTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Switchboard_Items.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._specjalizacjaTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Specjalizacja.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._switchboard_ItemsTableAdapter.Update(deletedRows));
+                    result = (result + this._specjalizacjaTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -5305,14 +4397,6 @@ namespace WindowsFormsApp1.Baza_edytowanaDataSetTableAdapters {
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._lekarzTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._specjalizacjaTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Specjalizacja.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._specjalizacjaTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -5348,7 +4432,7 @@ namespace WindowsFormsApp1.Baza_edytowanaDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public virtual int UpdateAll(Baza_edytowanaDataSet dataSet) {
+        public virtual int UpdateAll(_Baza_danych__accdb1_nowaDataSet dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
@@ -5367,11 +4451,6 @@ namespace WindowsFormsApp1.Baza_edytowanaDataSetTableAdapters {
             }
             if (((this._specjalizacjaTableAdapter != null) 
                         && (this.MatchTableAdapterConnection(this._specjalizacjaTableAdapter.Connection) == false))) {
-                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
-                        "tring.");
-            }
-            if (((this._switchboard_ItemsTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._switchboard_ItemsTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -5437,15 +4516,6 @@ namespace WindowsFormsApp1.Baza_edytowanaDataSetTableAdapters {
                     if (this._specjalizacjaTableAdapter.Adapter.AcceptChangesDuringUpdate) {
                         this._specjalizacjaTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
                         adaptersWithAcceptChangesDuringUpdate.Add(this._specjalizacjaTableAdapter.Adapter);
-                    }
-                }
-                if ((this._switchboard_ItemsTableAdapter != null)) {
-                    revertConnections.Add(this._switchboard_ItemsTableAdapter, this._switchboard_ItemsTableAdapter.Connection);
-                    this._switchboard_ItemsTableAdapter.Connection = ((global::System.Data.OleDb.OleDbConnection)(workConnection));
-                    this._switchboard_ItemsTableAdapter.Transaction = ((global::System.Data.OleDb.OleDbTransaction)(workTransaction));
-                    if (this._switchboard_ItemsTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._switchboard_ItemsTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._switchboard_ItemsTableAdapter.Adapter);
                     }
                 }
                 if ((this._wizytaTableAdapter != null)) {
@@ -5526,10 +4596,6 @@ namespace WindowsFormsApp1.Baza_edytowanaDataSetTableAdapters {
                 if ((this._specjalizacjaTableAdapter != null)) {
                     this._specjalizacjaTableAdapter.Connection = ((global::System.Data.OleDb.OleDbConnection)(revertConnections[this._specjalizacjaTableAdapter]));
                     this._specjalizacjaTableAdapter.Transaction = null;
-                }
-                if ((this._switchboard_ItemsTableAdapter != null)) {
-                    this._switchboard_ItemsTableAdapter.Connection = ((global::System.Data.OleDb.OleDbConnection)(revertConnections[this._switchboard_ItemsTableAdapter]));
-                    this._switchboard_ItemsTableAdapter.Transaction = null;
                 }
                 if ((this._wizytaTableAdapter != null)) {
                     this._wizytaTableAdapter.Connection = ((global::System.Data.OleDb.OleDbConnection)(revertConnections[this._wizytaTableAdapter]));

@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp1
 {
-    partial class Form2
+    partial class Logowanie
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Logowanie));
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -44,7 +44,7 @@
             this.button2.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.button2.Location = new System.Drawing.Point(675, 439);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(284, 52);
+            this.button2.Size = new System.Drawing.Size(284, 58);
             this.button2.TabIndex = 12;
             this.button2.Text = "Jeszcze nie masz konta? \r\nZarejestruj się!";
             this.button2.UseVisualStyleBackColor = false;
@@ -52,7 +52,7 @@
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(803, 386);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(156, 47);
@@ -98,7 +98,7 @@
             this.label1.TabIndex = 7;
             this.label1.Text = "Login";
             // 
-            // Form2
+            // Logowanie
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -113,7 +113,7 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Form2";
+            this.Name = "Logowanie";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Logowanie";
             this.Load += new System.EventHandler(this.Form2_Load);

@@ -13,38 +13,20 @@ using WindowsFormsApp1;
 
 namespace WindowsFormsApp1
 {
-    public partial class Form2 : Form
+    public partial class Logowanie : Form
     {
         private OleDbConnection connection;
         public static OleDbDataReader rd;
 
-        public Form2()
+        public Logowanie()
         {
             InitializeComponent();
-            string connectionString = "Provider=Microsoft.ACE.OLEDB.12.0;" + "Data Source=" + Application.StartupPath + "\\Baza_edytowana.accdb;";
+            string connectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Baza danych .accdb1_nowa.accdb;";
             connection = new OleDbConnection(connectionString);
-        }
-        //OleDbConnection connection = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Documents\Documents\Studia\3\Inżynieria programowania\Baza_edytowana.accdb;Persist Security Info=True");
-        
+        }        
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //try
-            //{
-            //    connection.Open();
-            //    OleDbCommand cmd = connection.CreateCommand();
-            //    cmd.CommandType = CommandType.Text;
-            //    cmd.CommandText = string.Empty;
-
-
-            //    connection.Close();
-            //}
-            //catch
-            //{
-            //    //
-
-            //}
-
             //string login;
             //string pass;
             //login = textBox1.Text;
@@ -90,24 +72,24 @@ namespace WindowsFormsApp1
                 connection.Open();
 
                 //string query = "SELECT Email, Haslo FROM Pacjent WHERE Email = @username AND Haslo = @password";
-                string query = "SELECT Email, Haslo FROM Pacjent WHERE Email = @username AND Haslo = @password";                
+                string query = "SELECT Email, Hasło FROM Pacjent WHERE Email = @username AND Hasło = @password";                
 
                 using (OleDbCommand command = new OleDbCommand(query, connection))
                 {
                     command.Parameters.Clear();
 
-                    command.Parameters.AddWithValue("@Email", username.Trim().ToString()); 
-                    command.Parameters.AddWithValue("@Haslo", password.Trim().ToString());
+                    command.Parameters.AddWithValue("@Email", username); 
+                    command.Parameters.AddWithValue("@Hasło", password);
 
                     rd = command.ExecuteReader();
 
-                    if (rd.HasRows)
-                    {
+                    if (rd.HasRows)                   {
+                       
                         while (rd.Read())
                         {
                             MessageBox.Show("Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
-                        
+
                         Menu newLevel = new Menu();
                         this.Hide();
                         newLevel.Show();
@@ -118,7 +100,7 @@ namespace WindowsFormsApp1
                     else
                     {
                         MessageBox.Show("Invalid username or password.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
+                    }                    
                 }
 
             }
@@ -133,7 +115,7 @@ namespace WindowsFormsApp1
         }
         private void button2_Click(object sender, EventArgs e)
         {
-            Form1 newLevel = new Form1();
+            Rejestracja newLevel = new Rejestracja();
             this.Hide();
             newLevel.Show();
         }

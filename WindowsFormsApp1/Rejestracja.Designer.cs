@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp1
 {
-    partial class Form1
+    partial class Rejestracja
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Rejestracja));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -84,10 +84,10 @@
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(794, 385);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(767, 375);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(156, 69);
+            this.button1.Size = new System.Drawing.Size(183, 79);
             this.button1.TabIndex = 4;
             this.button1.Text = "Utwórz konto";
             this.button1.UseVisualStyleBackColor = true;
@@ -98,9 +98,9 @@
             this.button3.BackColor = System.Drawing.Color.Gainsboro;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.button3.Location = new System.Drawing.Point(666, 471);
+            this.button3.Location = new System.Drawing.Point(666, 460);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(284, 52);
+            this.button3.Size = new System.Drawing.Size(284, 62);
             this.button3.TabIndex = 13;
             this.button3.Text = "Już masz konto? \r\nZaloguj się!";
             this.button3.UseVisualStyleBackColor = false;
@@ -150,7 +150,7 @@
             this.directorySearcher1.ServerPageTimeLimit = System.TimeSpan.Parse("-00:00:01");
             this.directorySearcher1.ServerTimeLimit = System.TimeSpan.Parse("-00:00:01");
             // 
-            // Form1
+            // Rejestracja
             // 
             this.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -172,7 +172,7 @@
             this.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Form1";
+            this.Name = "Rejestracja";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Rejestracja";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.OmFormClosed);
