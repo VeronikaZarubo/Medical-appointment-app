@@ -6,7 +6,7 @@ namespace WindowsFormsApp1
 {
     public partial class Rejestracja : Form
     {
-        public static string connectString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Baza danych .accdb1_nowa.accdb;";
+        public static string connectString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Baza danych nowa.accdb;";
         private OleDbConnection connection;
 
         public static OleDbDataReader rd;

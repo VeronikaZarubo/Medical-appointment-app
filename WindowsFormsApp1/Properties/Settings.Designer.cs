@@ -55,5 +55,16 @@ namespace WindowsFormsApp1.Properties {
                 return ((string)(this["Baza_danych_nowaConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=\"C:\\Documents\\Documents\\Nowy folder" +
+            "\\Baza danych nowa.accdb\"")]
+        public string Baza_danych_nowaConnectionString1 {
+            get {
+                return ((string)(this["Baza_danych_nowaConnectionString1"]));
+            }
+        }
     }
 }

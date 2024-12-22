@@ -20,9 +20,9 @@ namespace WindowsFormsApp1 {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("_Baza_danych__accdb1_nowaDataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("Baza_danych_nowaDataSet")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class _Baza_danych__accdb1_nowaDataSet : global::System.Data.DataSet {
+    public partial class Baza_danych_nowaDataSet : global::System.Data.DataSet {
         
         private LekarzDataTable tableLekarz;
         
@@ -40,7 +40,7 @@ namespace WindowsFormsApp1 {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public _Baza_danych__accdb1_nowaDataSet() {
+        public Baza_danych_nowaDataSet() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -51,7 +51,7 @@ namespace WindowsFormsApp1 {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected _Baza_danych__accdb1_nowaDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected Baza_danych_nowaDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -176,7 +176,7 @@ namespace WindowsFormsApp1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            _Baza_danych__accdb1_nowaDataSet cln = ((_Baza_danych__accdb1_nowaDataSet)(base.Clone()));
+            Baza_danych_nowaDataSet cln = ((Baza_danych_nowaDataSet)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -277,9 +277,9 @@ namespace WindowsFormsApp1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "_Baza_danych__accdb1_nowaDataSet";
+            this.DataSetName = "Baza_danych_nowaDataSet";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/_Baza_danych__accdb1_nowaDataSet.xsd";
+            this.Namespace = "http://tempuri.org/Baza_danych_nowaDataSet.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableLekarz = new LekarzDataTable();
@@ -335,7 +335,7 @@ namespace WindowsFormsApp1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            _Baza_danych__accdb1_nowaDataSet ds = new _Baza_danych__accdb1_nowaDataSet();
+            Baza_danych_nowaDataSet ds = new Baza_danych_nowaDataSet();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -696,7 +696,7 @@ namespace WindowsFormsApp1 {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                _Baza_danych__accdb1_nowaDataSet ds = new _Baza_danych__accdb1_nowaDataSet();
+                Baza_danych_nowaDataSet ds = new Baza_danych_nowaDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1046,7 +1046,7 @@ namespace WindowsFormsApp1 {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                _Baza_danych__accdb1_nowaDataSet ds = new _Baza_danych__accdb1_nowaDataSet();
+                Baza_danych_nowaDataSet ds = new Baza_danych_nowaDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1322,7 +1322,7 @@ namespace WindowsFormsApp1 {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                _Baza_danych__accdb1_nowaDataSet ds = new _Baza_danych__accdb1_nowaDataSet();
+                Baza_danych_nowaDataSet ds = new Baza_danych_nowaDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1631,7 +1631,7 @@ namespace WindowsFormsApp1 {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                _Baza_danych__accdb1_nowaDataSet ds = new _Baza_danych__accdb1_nowaDataSet();
+                Baza_danych_nowaDataSet ds = new Baza_danych_nowaDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -2451,7 +2451,7 @@ namespace WindowsFormsApp1 {
         }
     }
 }
-namespace WindowsFormsApp1._Baza_danych__accdb1_nowaDataSetTableAdapters {
+namespace WindowsFormsApp1.Baza_danych_nowaDataSetTableAdapters {
     
     
     /// <summary>
@@ -2640,7 +2640,7 @@ namespace WindowsFormsApp1._Baza_danych__accdb1_nowaDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.OleDb.OleDbConnection();
-            this._connection.ConnectionString = global::WindowsFormsApp1.Properties.Settings.Default.Baza_danych__accdb1_nowaConnectionString;
+            this._connection.ConnectionString = global::WindowsFormsApp1.Properties.Settings.Default.Baza_danych_nowaConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2658,7 +2658,7 @@ namespace WindowsFormsApp1._Baza_danych__accdb1_nowaDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(_Baza_danych__accdb1_nowaDataSet.LekarzDataTable dataTable) {
+        public virtual int Fill(Baza_danych_nowaDataSet.LekarzDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -2671,9 +2671,9 @@ namespace WindowsFormsApp1._Baza_danych__accdb1_nowaDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual _Baza_danych__accdb1_nowaDataSet.LekarzDataTable GetData() {
+        public virtual Baza_danych_nowaDataSet.LekarzDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            _Baza_danych__accdb1_nowaDataSet.LekarzDataTable dataTable = new _Baza_danych__accdb1_nowaDataSet.LekarzDataTable();
+            Baza_danych_nowaDataSet.LekarzDataTable dataTable = new Baza_danych_nowaDataSet.LekarzDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -2681,14 +2681,14 @@ namespace WindowsFormsApp1._Baza_danych__accdb1_nowaDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(_Baza_danych__accdb1_nowaDataSet.LekarzDataTable dataTable) {
+        public virtual int Update(Baza_danych_nowaDataSet.LekarzDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(_Baza_danych__accdb1_nowaDataSet dataSet) {
+        public virtual int Update(Baza_danych_nowaDataSet dataSet) {
             return this.Adapter.Update(dataSet, "Lekarz");
         }
         
@@ -3123,7 +3123,7 @@ namespace WindowsFormsApp1._Baza_danych__accdb1_nowaDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.OleDb.OleDbConnection();
-            this._connection.ConnectionString = global::WindowsFormsApp1.Properties.Settings.Default.Baza_danych__accdb1_nowaConnectionString;
+            this._connection.ConnectionString = global::WindowsFormsApp1.Properties.Settings.Default.Baza_danych_nowaConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3141,7 +3141,7 @@ namespace WindowsFormsApp1._Baza_danych__accdb1_nowaDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(_Baza_danych__accdb1_nowaDataSet.PacjentDataTable dataTable) {
+        public virtual int Fill(Baza_danych_nowaDataSet.PacjentDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -3154,9 +3154,9 @@ namespace WindowsFormsApp1._Baza_danych__accdb1_nowaDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual _Baza_danych__accdb1_nowaDataSet.PacjentDataTable GetData() {
+        public virtual Baza_danych_nowaDataSet.PacjentDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            _Baza_danych__accdb1_nowaDataSet.PacjentDataTable dataTable = new _Baza_danych__accdb1_nowaDataSet.PacjentDataTable();
+            Baza_danych_nowaDataSet.PacjentDataTable dataTable = new Baza_danych_nowaDataSet.PacjentDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -3164,14 +3164,14 @@ namespace WindowsFormsApp1._Baza_danych__accdb1_nowaDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(_Baza_danych__accdb1_nowaDataSet.PacjentDataTable dataTable) {
+        public virtual int Update(Baza_danych_nowaDataSet.PacjentDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(_Baza_danych__accdb1_nowaDataSet dataSet) {
+        public virtual int Update(Baza_danych_nowaDataSet dataSet) {
             return this.Adapter.Update(dataSet, "Pacjent");
         }
         
@@ -3576,7 +3576,7 @@ namespace WindowsFormsApp1._Baza_danych__accdb1_nowaDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.OleDb.OleDbConnection();
-            this._connection.ConnectionString = global::WindowsFormsApp1.Properties.Settings.Default.Baza_danych__accdb1_nowaConnectionString;
+            this._connection.ConnectionString = global::WindowsFormsApp1.Properties.Settings.Default.Baza_danych_nowaConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3593,7 +3593,7 @@ namespace WindowsFormsApp1._Baza_danych__accdb1_nowaDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(_Baza_danych__accdb1_nowaDataSet.SpecjalizacjaDataTable dataTable) {
+        public virtual int Fill(Baza_danych_nowaDataSet.SpecjalizacjaDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -3606,9 +3606,9 @@ namespace WindowsFormsApp1._Baza_danych__accdb1_nowaDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual _Baza_danych__accdb1_nowaDataSet.SpecjalizacjaDataTable GetData() {
+        public virtual Baza_danych_nowaDataSet.SpecjalizacjaDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            _Baza_danych__accdb1_nowaDataSet.SpecjalizacjaDataTable dataTable = new _Baza_danych__accdb1_nowaDataSet.SpecjalizacjaDataTable();
+            Baza_danych_nowaDataSet.SpecjalizacjaDataTable dataTable = new Baza_danych_nowaDataSet.SpecjalizacjaDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -3616,14 +3616,14 @@ namespace WindowsFormsApp1._Baza_danych__accdb1_nowaDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(_Baza_danych__accdb1_nowaDataSet.SpecjalizacjaDataTable dataTable) {
+        public virtual int Update(Baza_danych_nowaDataSet.SpecjalizacjaDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(_Baza_danych__accdb1_nowaDataSet dataSet) {
+        public virtual int Update(Baza_danych_nowaDataSet dataSet) {
             return this.Adapter.Update(dataSet, "Specjalizacja");
         }
         
@@ -3902,7 +3902,7 @@ namespace WindowsFormsApp1._Baza_danych__accdb1_nowaDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.OleDb.OleDbConnection();
-            this._connection.ConnectionString = global::WindowsFormsApp1.Properties.Settings.Default.Baza_danych__accdb1_nowaConnectionString;
+            this._connection.ConnectionString = global::WindowsFormsApp1.Properties.Settings.Default.Baza_danych_nowaConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3919,7 +3919,7 @@ namespace WindowsFormsApp1._Baza_danych__accdb1_nowaDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(_Baza_danych__accdb1_nowaDataSet.WizytaDataTable dataTable) {
+        public virtual int Fill(Baza_danych_nowaDataSet.WizytaDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -3932,9 +3932,9 @@ namespace WindowsFormsApp1._Baza_danych__accdb1_nowaDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual _Baza_danych__accdb1_nowaDataSet.WizytaDataTable GetData() {
+        public virtual Baza_danych_nowaDataSet.WizytaDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            _Baza_danych__accdb1_nowaDataSet.WizytaDataTable dataTable = new _Baza_danych__accdb1_nowaDataSet.WizytaDataTable();
+            Baza_danych_nowaDataSet.WizytaDataTable dataTable = new Baza_danych_nowaDataSet.WizytaDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -3942,14 +3942,14 @@ namespace WindowsFormsApp1._Baza_danych__accdb1_nowaDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(_Baza_danych__accdb1_nowaDataSet.WizytaDataTable dataTable) {
+        public virtual int Update(Baza_danych_nowaDataSet.WizytaDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(_Baza_danych__accdb1_nowaDataSet dataSet) {
+        public virtual int Update(Baza_danych_nowaDataSet dataSet) {
             return this.Adapter.Update(dataSet, "Wizyta");
         }
         
@@ -4278,7 +4278,7 @@ namespace WindowsFormsApp1._Baza_danych__accdb1_nowaDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateUpdatedRows(_Baza_danych__accdb1_nowaDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(Baza_danych_nowaDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._lekarzTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.Lekarz.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
@@ -4324,7 +4324,7 @@ namespace WindowsFormsApp1._Baza_danych__accdb1_nowaDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateInsertedRows(_Baza_danych__accdb1_nowaDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(Baza_danych_nowaDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._lekarzTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.Lekarz.Select(null, null, global::System.Data.DataViewRowState.Added);
@@ -4366,7 +4366,7 @@ namespace WindowsFormsApp1._Baza_danych__accdb1_nowaDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateDeletedRows(_Baza_danych__accdb1_nowaDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(Baza_danych_nowaDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             if ((this._wizytaTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.Wizyta.Select(null, null, global::System.Data.DataViewRowState.Deleted);
@@ -4432,7 +4432,7 @@ namespace WindowsFormsApp1._Baza_danych__accdb1_nowaDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public virtual int UpdateAll(_Baza_danych__accdb1_nowaDataSet dataSet) {
+        public virtual int UpdateAll(Baza_danych_nowaDataSet dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }

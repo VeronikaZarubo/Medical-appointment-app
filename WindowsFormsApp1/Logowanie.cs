@@ -21,7 +21,7 @@ namespace WindowsFormsApp1
         public Logowanie()
         {
             InitializeComponent();
-            string connectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Baza danych .accdb1_nowa.accdb;";
+            string connectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Baza danych nowa.accdb;";
             connection = new OleDbConnection(connectionString);
         }        
 

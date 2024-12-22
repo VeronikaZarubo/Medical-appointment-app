@@ -19,7 +19,7 @@ namespace WindowsFormsApp1
         private string surname;
         private string login;
 
-        public static string connectString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Baza danych .accdb1_nowa.accdb;";
+        public static string connectString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Baza danych nowa.accdb;";
         private OleDbConnection connection;
 
         public Menu()
