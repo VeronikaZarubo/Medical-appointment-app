@@ -100,13 +100,14 @@
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.AliceBlue;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(877, 430);
+            this.button1.Location = new System.Drawing.Point(913, 414);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(147, 62);
             this.button1.TabIndex = 5;
             this.button1.Text = "Wizyty";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // Menu
