@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Common;
 using System.Data.OleDb;
 using System.Drawing;
 using System.Linq;
@@ -19,13 +20,15 @@ namespace WindowsFormsApp1
         private string surname;
         private string login;
 
-        public static string connectString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Baza danych nowa.accdb;";
         private OleDbConnection connection;
+        public static OleDbDataReader rd;
 
         public Menu()
         {
             InitializeComponent();
-        }
+            string connectString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Baza danych nowa.accdb;";
+            connection = new OleDbConnection(connectString);
+        }   
 
         private void Menu_Load(object sender, EventArgs e)
         {
@@ -67,36 +70,32 @@ namespace WindowsFormsApp1
 
         private void search_button_Click(object sender, EventArgs e)
         {
-            try
-            {
-                string spec = tb_search.Text.ToString();
+            string spec = tb_search.Text.ToString();
 
+            try
+            {              
                 connection.Open();
 
-                string query = "SELECT * FROM Lekarz WHERE Specjalizacja = @spec;";
+                string query = "SELECT [Imię lekarza],  [Nazwisko lekarza], Specjalizacja FROM Lekarz WHERE [Imię lekarza] LIKE @SearchTerm OR [Nazwisko lekarza] LIKE @SearchTerm OR [Specjalizacja] LIKE @SearchTerm;";
+
 
                 using (OleDbCommand command = new OleDbCommand(query, connection))
                 {
                     command.Parameters.Clear();
-
-                    command.Parameters.AddWithValue("@Specjalizacja", spec.Trim());
+                                        
+                    command.Parameters.AddWithValue("@SearchTerm", "%" + spec + "%");
 
                     OleDbDataAdapter da = new OleDbDataAdapter(command);
                     DataTable dt = new DataTable();
                     da.Fill(dt);
                     dataGridView1.DataSource = dt;
                 }
+                connection.Close();
             }
             catch (Exception ex)
             {
                 MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                connection.Close();
-
-                //spec = string.Empty;
-            }
+            }            
         }
     }
 }

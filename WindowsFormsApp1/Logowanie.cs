@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Data.OleDb;
 using System.Data.SqlClient;
 using WindowsFormsApp1;
+using System.Security.Cryptography.X509Certificates;
 
 namespace WindowsFormsApp1
 {
@@ -25,10 +26,10 @@ namespace WindowsFormsApp1
             connection = new OleDbConnection(connectionString);
         }        
 
-        private void button1_Click(object sender, EventArgs e)
+        private void bt_switchToRegistation_Click(object sender, EventArgs e)
         {
-            string username = textBox1.Text;
-            string password = textBox2.Text;
+            string username = tb_login.Text;
+            string password = tb_passLogin.Text;
 
             if (string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(password))
             {
@@ -53,14 +54,14 @@ namespace WindowsFormsApp1
 
                     if (rd.HasRows)
                     {
-                        while (rd.Read())
-                        {
-                            MessageBox.Show("Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
-
                         Menu newLevel = new Menu();
                         this.Hide();
                         newLevel.Show();
+
+                        while (rd.Read())
+                        {
+                            MessageBox.Show("Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }                                                
 
                         username = string.Empty;
                         password = string.Empty;
@@ -78,10 +79,11 @@ namespace WindowsFormsApp1
             }
             finally
             {
+                rd.Close(); 
                 connection.Close();
             }
         }
-        private void button2_Click(object sender, EventArgs e)
+        private void bt_login_Click(object sender, EventArgs e)
         {
             Rejestracja newLevel = new Rejestracja();
             this.Hide();
@@ -95,9 +97,25 @@ namespace WindowsFormsApp1
 
         private void Form2_Load(object sender, EventArgs e)
         { }
-        
 
-    }
-    
-    
+        private void checkBox_passMask_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox_passMask.CheckState == CheckState.Checked)
+                tb_passLogin.UseSystemPasswordChar = true;
+            else
+                tb_passLogin.UseSystemPasswordChar = false;            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //if (checkBox_passMask.CheckState == CheckState.Checked)
+            //    tb_passLogin.UseSystemPasswordChar = true;
+            //else
+            //    tb_passLogin.UseSystemPasswordChar = false;
+
+            
+
+            //if 
+        }
+    } 
 }

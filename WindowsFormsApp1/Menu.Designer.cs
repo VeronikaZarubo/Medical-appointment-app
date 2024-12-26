@@ -39,9 +39,10 @@
             // 
             // tb_search
             // 
-            this.tb_search.Location = new System.Drawing.Point(373, 379);
+            this.tb_search.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_search.Location = new System.Drawing.Point(375, 374);
             this.tb_search.Name = "tb_search";
-            this.tb_search.Size = new System.Drawing.Size(249, 22);
+            this.tb_search.Size = new System.Drawing.Size(308, 34);
             this.tb_search.TabIndex = 0;
             this.tb_search.TextChanged += new System.EventHandler(this.tb_search_TextChanged);
             this.tb_search.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_search_KeyPress);
@@ -49,11 +50,11 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(373, 414);
+            this.dataGridView1.Location = new System.Drawing.Point(314, 414);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(317, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(500, 195);
             this.dataGridView1.TabIndex = 1;
             // 
             // button1_Moj_profil
@@ -85,7 +86,7 @@
             this.search_button.BackColor = System.Drawing.Color.AliceBlue;
             this.search_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.search_button.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.search_button.Location = new System.Drawing.Point(646, 369);
+            this.search_button.Location = new System.Drawing.Point(710, 369);
             this.search_button.Name = "search_button";
             this.search_button.Size = new System.Drawing.Size(44, 39);
             this.search_button.TabIndex = 4;
