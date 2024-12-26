@@ -21,7 +21,6 @@ namespace WindowsFormsApp1
         private string login;
 
         private OleDbConnection connection;
-        public static OleDbDataReader rd;
 
         public Menu()
         {
@@ -40,17 +39,7 @@ namespace WindowsFormsApp1
         {
 
         }
-        private void tb_search_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            //oledbconnection connection = new oledbconnection("provider=microsoft.ace.oledb.12.0;data source=baza danych .accdb1_nowa.accdb");
-            //if (tb_search.text != "")
-            //{
-
-
-            //}
-
-        }
-
+        
         private void button1_Moj_profil_Click(object sender, EventArgs e)
         {
             // Передаем данные пользователя в конструктор формы profil
@@ -73,10 +62,17 @@ namespace WindowsFormsApp1
             string spec = tb_search.Text.ToString();
 
             try
-            {              
+            {
+                if (string.IsNullOrWhiteSpace(spec))
+                {
+                    MessageBox.Show("Please enter a search term.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
                 connection.Open();
 
-                string query = "SELECT [Imię lekarza],  [Nazwisko lekarza], Specjalizacja FROM Lekarz WHERE [Imię lekarza] LIKE @SearchTerm OR [Nazwisko lekarza] LIKE @SearchTerm OR [Specjalizacja] LIKE @SearchTerm;";
+                string query = "SELECT [Imię lekarza],  [Nazwisko lekarza], Specjalizacja FROM Lekarz " +
+                    "WHERE [Imię lekarza] LIKE @SearchTerm OR [Nazwisko lekarza] LIKE @SearchTerm OR [Specjalizacja] LIKE @SearchTerm;";
 
 
                 using (OleDbCommand command = new OleDbCommand(query, connection))
@@ -90,12 +86,33 @@ namespace WindowsFormsApp1
                     da.Fill(dt);
                     dataGridView1.DataSource = dt;
                 }
-                connection.Close();
             }
             catch (Exception ex)
             {
                 MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }            
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+
+        private void tb_search_Enter(object sender, EventArgs e)
+        {
+            if (tb_search.Text == "Wyszukaj lekarza...")
+            {
+                tb_search.Text = "";
+                tb_search.ForeColor = Color.Black;
+            }
+        }
+
+        private void tb_search_Leave(object sender, EventArgs e)
+        {
+            if (tb_search.Text == "")
+            {
+                tb_search.Text = "Wyszukaj lekarza...";
+                tb_search.ForeColor = Color.Silver;
+            }
         }
     }
 }

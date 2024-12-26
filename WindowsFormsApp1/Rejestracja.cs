@@ -87,6 +87,7 @@ namespace WindowsFormsApp1
                 finally
                 {
                     connection.Close();
+                    rd.Close(); 
 
                     name = string.Empty;
                     surname = string.Empty;
@@ -96,9 +97,7 @@ namespace WindowsFormsApp1
             }            
         }
         private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
+        { }
 
         private void OmFormClosed(object sender, FormClosedEventArgs e)
         {
@@ -110,7 +109,6 @@ namespace WindowsFormsApp1
             Logowanie newLevel = new Logowanie();
             this.Hide();
             newLevel.Show();
-
         }
     }
 }

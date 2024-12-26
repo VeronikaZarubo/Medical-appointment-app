@@ -40,12 +40,15 @@
             // tb_search
             // 
             this.tb_search.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_search.ForeColor = System.Drawing.SystemColors.InactiveCaption;
             this.tb_search.Location = new System.Drawing.Point(375, 374);
             this.tb_search.Name = "tb_search";
             this.tb_search.Size = new System.Drawing.Size(308, 34);
             this.tb_search.TabIndex = 0;
+            this.tb_search.Text = "Wyszukaj lekarza...";
             this.tb_search.TextChanged += new System.EventHandler(this.tb_search_TextChanged);
-            this.tb_search.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_search_KeyPress);
+            this.tb_search.Enter += new System.EventHandler(this.tb_search_Enter);
+            this.tb_search.Leave += new System.EventHandler(this.tb_search_Leave);
             // 
             // dataGridView1
             // 

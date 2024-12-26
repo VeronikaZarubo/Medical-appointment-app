@@ -54,7 +54,7 @@
             // bt_login
             // 
             this.bt_login.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_login.Location = new System.Drawing.Point(760, 393);
+            this.bt_login.Location = new System.Drawing.Point(769, 392);
             this.bt_login.Name = "bt_login";
             this.bt_login.Size = new System.Drawing.Size(163, 47);
             this.bt_login.TabIndex = 11;
@@ -65,7 +65,7 @@
             // tb_passLogin
             // 
             this.tb_passLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            this.tb_passLogin.Location = new System.Drawing.Point(760, 338);
+            this.tb_passLogin.Location = new System.Drawing.Point(769, 338);
             this.tb_passLogin.Name = "tb_passLogin";
             this.tb_passLogin.Size = new System.Drawing.Size(163, 30);
             this.tb_passLogin.TabIndex = 10;
@@ -73,11 +73,10 @@
             // tb_login
             // 
             this.tb_login.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            this.tb_login.Location = new System.Drawing.Point(760, 282);
+            this.tb_login.Location = new System.Drawing.Point(769, 282);
             this.tb_login.Name = "tb_login";
             this.tb_login.Size = new System.Drawing.Size(163, 30);
             this.tb_login.TabIndex = 9;
-            this.tb_login.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label_passLog
             // 

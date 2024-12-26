@@ -90,11 +90,6 @@ namespace WindowsFormsApp1
             newLevel.Show();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        { 
-
-        }
-
         private void Form2_Load(object sender, EventArgs e)
         { }
 
