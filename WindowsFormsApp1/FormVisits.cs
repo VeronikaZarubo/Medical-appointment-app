@@ -21,7 +21,7 @@ namespace WindowsFormsApp1
 
         private void LoadVisitsFromDatabase()
         {
-            string connectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\\Baza_edytowana.accdb";
+            string connectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Baza danych nowa.accdb;";
 
             try
             {
@@ -62,7 +62,7 @@ namespace WindowsFormsApp1
 
         private void buttonHome_Click(object sender, EventArgs e)
         {
-            Form2 loginForm = new Form2();
+            Menu loginForm = new Menu();
             this.Hide();
             loginForm.Show();
         }
