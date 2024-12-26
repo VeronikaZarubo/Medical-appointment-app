@@ -35,8 +35,7 @@
             this.tb_login = new System.Windows.Forms.TextBox();
             this.label_passLog = new System.Windows.Forms.Label();
             this.label_login = new System.Windows.Forms.Label();
-            this.checkBox_passMask = new System.Windows.Forms.CheckBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.bt_passMask = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // bt_switchToRegistation
@@ -84,7 +83,7 @@
             // 
             this.label_passLog.AutoSize = true;
             this.label_passLog.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_passLog.Location = new System.Drawing.Point(650, 338);
+            this.label_passLog.Location = new System.Drawing.Point(661, 338);
             this.label_passLog.Name = "label_passLog";
             this.label_passLog.Size = new System.Drawing.Size(83, 20);
             this.label_passLog.TabIndex = 8;
@@ -94,36 +93,23 @@
             // 
             this.label_login.AutoSize = true;
             this.label_login.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_login.Location = new System.Drawing.Point(650, 282);
+            this.label_login.Location = new System.Drawing.Point(661, 282);
             this.label_login.Name = "label_login";
             this.label_login.Size = new System.Drawing.Size(50, 20);
             this.label_login.TabIndex = 7;
             this.label_login.Text = "Login";
             // 
-            // checkBox_passMask
+            // bt_passMask
             // 
-            this.checkBox_passMask.AutoSize = true;
-            this.checkBox_passMask.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox_passMask.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.checkBox_passMask.Location = new System.Drawing.Point(939, 340);
-            this.checkBox_passMask.Name = "checkBox_passMask";
-            this.checkBox_passMask.Size = new System.Drawing.Size(55, 29);
-            this.checkBox_passMask.TabIndex = 13;
-            this.checkBox_passMask.Text = "👁\r\n";
-            this.checkBox_passMask.UseVisualStyleBackColor = true;
-            this.checkBox_passMask.CheckedChanged += new System.EventHandler(this.checkBox_passMask_CheckedChanged);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Gainsboro;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(950, 282);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(43, 32);
-            this.button1.TabIndex = 14;
-            this.button1.Text = "👁";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.bt_passMask.BackColor = System.Drawing.Color.Gainsboro;
+            this.bt_passMask.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_passMask.Location = new System.Drawing.Point(947, 335);
+            this.bt_passMask.Name = "bt_passMask";
+            this.bt_passMask.Size = new System.Drawing.Size(42, 36);
+            this.bt_passMask.TabIndex = 14;
+            this.bt_passMask.Text = "👁";
+            this.bt_passMask.UseVisualStyleBackColor = false;
+            this.bt_passMask.Click += new System.EventHandler(this.bt_passMask_Click);
             // 
             // Logowanie
             // 
@@ -132,8 +118,7 @@
             this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.Logowanie;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1082, 703);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.checkBox_passMask);
+            this.Controls.Add(this.bt_passMask);
             this.Controls.Add(this.bt_switchToRegistation);
             this.Controls.Add(this.bt_login);
             this.Controls.Add(this.tb_passLogin);
@@ -159,7 +144,6 @@
         private System.Windows.Forms.TextBox tb_login;
         private System.Windows.Forms.Label label_passLog;
         private System.Windows.Forms.Label label_login;
-        private System.Windows.Forms.CheckBox checkBox_passMask;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button bt_passMask;
     }
 }

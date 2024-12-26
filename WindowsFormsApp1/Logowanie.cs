@@ -98,24 +98,16 @@ namespace WindowsFormsApp1
         private void Form2_Load(object sender, EventArgs e)
         { }
 
-        private void checkBox_passMask_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBox_passMask.CheckState == CheckState.Checked)
+        private void bt_passMask_Click(object sender, EventArgs e)
+        {  
+            if (tb_passLogin.UseSystemPasswordChar == false)
+            {
                 tb_passLogin.UseSystemPasswordChar = true;
-            else
-                tb_passLogin.UseSystemPasswordChar = false;            
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            //if (checkBox_passMask.CheckState == CheckState.Checked)
-            //    tb_passLogin.UseSystemPasswordChar = true;
-            //else
-            //    tb_passLogin.UseSystemPasswordChar = false;
-
-            
-
-            //if 
+            }
+            else if (tb_passLogin.UseSystemPasswordChar == true)
+            {
+                tb_passLogin.UseSystemPasswordChar = false;
+            }
         }
     } 
 }
