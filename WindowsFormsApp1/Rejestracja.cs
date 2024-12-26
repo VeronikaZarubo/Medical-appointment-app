@@ -87,7 +87,7 @@ namespace WindowsFormsApp1
                 finally
                 {
                     connection.Close();
-                    rd.Close(); 
+                    //rd.Close(); 
 
                     name = string.Empty;
                     surname = string.Empty;

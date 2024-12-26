@@ -81,7 +81,7 @@ namespace WindowsFormsApp1
             }
             finally
             {
-                rd.Close(); 
+                //rd.Close(); 
                 connection.Close();
             }
         }
