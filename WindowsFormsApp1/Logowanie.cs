@@ -24,6 +24,8 @@ namespace WindowsFormsApp1
             InitializeComponent();
             string connectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Baza danych nowa.accdb;";
             connection = new OleDbConnection(connectionString);
+
+            tb_passLogin.UseSystemPasswordChar = true;
         }        
 
         private void bt_switchToRegistation_Click(object sender, EventArgs e)
