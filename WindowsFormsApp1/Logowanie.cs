@@ -106,5 +106,10 @@ namespace WindowsFormsApp1
                 tb_passLogin.UseSystemPasswordChar = false;
             }
         }
+
+        private void Logowanie_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     } 
 }

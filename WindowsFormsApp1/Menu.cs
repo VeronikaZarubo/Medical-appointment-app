@@ -114,5 +114,10 @@ namespace WindowsFormsApp1
                 tb_search.ForeColor = Color.Silver;
             }
         }
+
+        private void Menu_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
