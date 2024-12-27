@@ -58,5 +58,15 @@ namespace WindowsFormsApp1
             }
 
         }
+
+        private void lekarzDataGridView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            lekarzDataGridView_CellContentClick(sender, e);
+        }
+
+        private void lekarzDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            lekarzDataGridView_CellContentClick(sender, e);
+        }
     }
 }

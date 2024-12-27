@@ -30,45 +30,22 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(lista_lekar));
-            this.baza_danych_nowaDataSet = new WindowsFormsApp1.Baza_danych_nowaDataSet();
-            this.lekarzBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.lekarzTableAdapter = new WindowsFormsApp1.Baza_danych_nowaDataSetTableAdapters.LekarzTableAdapter();
-            this.tableAdapterManager = new WindowsFormsApp1.Baza_danych_nowaDataSetTableAdapters.TableAdapterManager();
             this.lekarzDataGridView = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.baza_danych_nowaDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lekarzBindingSource)).BeginInit();
+            this.lekarzBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.baza_danych_nowaDataSet = new WindowsFormsApp1.Baza_danych_nowaDataSet();
+            this.lekarzTableAdapter = new WindowsFormsApp1.Baza_danych_nowaDataSetTableAdapters.LekarzTableAdapter();
+            this.tableAdapterManager = new WindowsFormsApp1.Baza_danych_nowaDataSetTableAdapters.TableAdapterManager();
             ((System.ComponentModel.ISupportInitialize)(this.lekarzDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lekarzBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.baza_danych_nowaDataSet)).BeginInit();
             this.SuspendLayout();
-            // 
-            // baza_danych_nowaDataSet
-            // 
-            this.baza_danych_nowaDataSet.DataSetName = "Baza_danych_nowaDataSet";
-            this.baza_danych_nowaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // lekarzBindingSource
-            // 
-            this.lekarzBindingSource.DataMember = "Lekarz";
-            this.lekarzBindingSource.DataSource = this.baza_danych_nowaDataSet;
-            // 
-            // lekarzTableAdapter
-            // 
-            this.lekarzTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.LekarzTableAdapter = this.lekarzTableAdapter;
-            this.tableAdapterManager.PacjentTableAdapter = null;
-            this.tableAdapterManager.SpecjalizacjaTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = WindowsFormsApp1.Baza_danych_nowaDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            this.tableAdapterManager.WizytaTableAdapter = null;
             // 
             // lekarzDataGridView
             // 
@@ -91,7 +68,20 @@
             this.lekarzDataGridView.RowTemplate.Height = 24;
             this.lekarzDataGridView.Size = new System.Drawing.Size(861, 364);
             this.lekarzDataGridView.TabIndex = 1;
+            this.lekarzDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.lekarzDataGridView_CellClick);
             this.lekarzDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.lekarzDataGridView_CellContentClick);
+            this.lekarzDataGridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.lekarzDataGridView_CellDoubleClick);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Font = new System.Drawing.Font("Mongolian Baiti", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(342, 13);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(296, 40);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "NASI LEKARZE";
             // 
             // dataGridViewTextBoxColumn2
             // 
@@ -141,16 +131,28 @@
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             this.dataGridViewTextBoxColumn8.Width = 125;
             // 
-            // label1
+            // lekarzBindingSource
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Font = new System.Drawing.Font("Mongolian Baiti", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(342, 13);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(296, 40);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "NASI LEKARZE";
+            this.lekarzBindingSource.DataMember = "Lekarz";
+            this.lekarzBindingSource.DataSource = this.baza_danych_nowaDataSet;
+            // 
+            // baza_danych_nowaDataSet
+            // 
+            this.baza_danych_nowaDataSet.DataSetName = "Baza_danych_nowaDataSet";
+            this.baza_danych_nowaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // lekarzTableAdapter
+            // 
+            this.lekarzTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.LekarzTableAdapter = this.lekarzTableAdapter;
+            this.tableAdapterManager.PacjentTableAdapter = null;
+            this.tableAdapterManager.SpecjalizacjaTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = WindowsFormsApp1.Baza_danych_nowaDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.WizytaTableAdapter = null;
             // 
             // lista_lekar
             // 
@@ -163,9 +165,9 @@
             this.Name = "lista_lekar";
             this.Text = "LISTA LEKARZE";
             this.Load += new System.EventHandler(this.lista_lekar_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.baza_danych_nowaDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lekarzBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lekarzDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lekarzBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.baza_danych_nowaDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
