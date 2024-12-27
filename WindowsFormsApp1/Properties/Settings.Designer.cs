@@ -26,22 +26,11 @@ namespace WindowsFormsApp1.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=\"C:\\Documents\\Documents\\Studia\\3\\In" +
-            "żynieria programowania\\Baza_edytowana.accdb\"")]
-        public string Baza_edytowanaConnectionString {
+        [global::System.Configuration.DefaultSettingValueAttribute("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=\"|DataDirectory|\\Baza danych nowa.a" +
+            "ccdb\"")]
+        public string Baza_danych_nowaConnectionString1 {
             get {
-                return ((string)(this["Baza_edytowanaConnectionString"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=\"|DataDirectory|\\Baza danych .accdb" +
-            "1_nowa.accdb\"")]
-        public string Baza_danych__accdb1_nowaConnectionString {
-            get {
-                return ((string)(this["Baza_danych__accdb1_nowaConnectionString"]));
+                return ((string)(this["Baza_danych_nowaConnectionString1"]));
             }
         }
         
@@ -53,17 +42,6 @@ namespace WindowsFormsApp1.Properties {
         public string Baza_danych_nowaConnectionString {
             get {
                 return ((string)(this["Baza_danych_nowaConnectionString"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=\"C:\\Documents\\Documents\\Nowy folder" +
-            "\\Baza danych nowa.accdb\"")]
-        public string Baza_danych_nowaConnectionString1 {
-            get {
-                return ((string)(this["Baza_danych_nowaConnectionString1"]));
             }
         }
     }

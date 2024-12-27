@@ -69,6 +69,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Baza_danych_nowaDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Baza_danych_nowaDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Baza_danych_nowaDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="dod_info.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -168,6 +173,17 @@
     <None Include="Baza_danych_nowaDataSet.xss">
       <DependentUpon>Baza_danych_nowaDataSet.xsd</DependentUpon>
     </None>
+    <None Include="Baza_danych_nowaDataSet1.xsc">
+      <DependentUpon>Baza_danych_nowaDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Baza_danych_nowaDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Baza_danych_nowaDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Baza_danych_nowaDataSet1.xss">
+      <DependentUpon>Baza_danych_nowaDataSet1.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -201,6 +217,11 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Baza danych nowa.accdb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -29,8 +29,8 @@ namespace WindowsFormsApp1
         {
             // TODO: Ten wiersz kodu wczytuje dane do tabeli 'baza_danych_nowaDataSet.Lekarz' . Możesz go przenieść lub usunąć.
             this.lekarzTableAdapter.Fill(this.baza_danych_nowaDataSet.Lekarz);
-            lekarzDataGridView.Columns["dodatkoweInformacje"].Visible = false;
-            lekarzDataGridView.Columns["cennikUsług"].Visible = false;
+            lekarzDataGridView.Columns["dataGridViewTextBoxColumn7"].Visible = false;
+            lekarzDataGridView.Columns["dataGridViewTextBoxColumn8"].Visible = false;
 
         }
 
@@ -39,13 +39,13 @@ namespace WindowsFormsApp1
             if (lekarzDataGridView.CurrentRow != null)
             {
                 var selectedrow = lekarzDataGridView.CurrentRow;
-                string imięLekarza = selectedrow.Cells["imięLekarza"].Value.ToString();
-                string nazwiskoLekarza = selectedrow.Cells["nazwiskoLekarza"].Value.ToString();
-                int wiek = Convert.ToInt32(selectedrow.Cells["Wiek"].Value);
-                string specjalizacja = selectedrow.Cells["Specjalizacja"].Value.ToString();
-                string cennikUsług = selectedrow.Cells["cennikUsług"].Value.ToString();
+                string imięLekarza = selectedrow.Cells["dataGridViewTextBoxColumn3"].Value.ToString();
+                string nazwiskoLekarza = selectedrow.Cells["dataGridViewTextBoxColumn2"].Value.ToString();
+                int wiek = Convert.ToInt32(selectedrow.Cells["dataGridViewTextBoxColumn4"].Value);
+                string specjalizacja = selectedrow.Cells["dataGridViewTextBoxColumn6"].Value.ToString();
+                string cennikUsług = selectedrow.Cells["dataGridViewTextBoxColumn8"].Value.ToString();
 
-                string dodatkoweinformacje = selectedrow.Cells["Dodatkoweinformacje"].Value.ToString();
+                string dodatkoweinformacje = selectedrow.Cells["dataGridViewTextBoxColumn7"].Value.ToString();
 
 
                 dod_info detailsForm = new dod_info();
