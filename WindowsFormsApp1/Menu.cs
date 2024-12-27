@@ -118,5 +118,12 @@ namespace WindowsFormsApp1
             this.Hide();
             wizyty.Show();
         }
+
+        private void button2_list_lekar_Click(object sender, EventArgs e)
+        {
+            lista_lekar lista_Lekar = new lista_lekar();
+            this.Hide();
+            lista_Lekar.Show();
+        }
     }
 }

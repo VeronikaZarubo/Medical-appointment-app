@@ -36,6 +36,7 @@
             this.log_out_button = new System.Windows.Forms.Button();
             this.search_button = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.button2_list_lekar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -113,7 +114,7 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.AliceBlue;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button1.Location = new System.Drawing.Point(913, 414);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(147, 62);
@@ -121,6 +122,18 @@
             this.button1.Text = "Wizyty";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // button2_list_lekar
+            // 
+            this.button2_list_lekar.BackColor = System.Drawing.Color.AliceBlue;
+            this.button2_list_lekar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button2_list_lekar.Location = new System.Drawing.Point(32, 414);
+            this.button2_list_lekar.Name = "button2_list_lekar";
+            this.button2_list_lekar.Size = new System.Drawing.Size(147, 62);
+            this.button2_list_lekar.TabIndex = 6;
+            this.button2_list_lekar.Text = "Lista lekarze";
+            this.button2_list_lekar.UseVisualStyleBackColor = false;
+            this.button2_list_lekar.Click += new System.EventHandler(this.button2_list_lekar_Click);
             // 
             // Menu
             // 
@@ -130,6 +143,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1082, 703);
+            this.Controls.Add(this.button2_list_lekar);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.search_button);
             this.Controls.Add(this.log_out_button);
@@ -158,5 +172,6 @@
         private System.Windows.Forms.Button log_out_button;
         private System.Windows.Forms.Button search_button;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2_list_lekar;
     }
 }
