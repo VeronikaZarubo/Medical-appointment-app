@@ -33,6 +33,7 @@
             this.button1_umów = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -49,9 +50,9 @@
             // 
             this.button1_umów.BackColor = System.Drawing.Color.AliceBlue;
             this.button1_umów.Font = new System.Drawing.Font("Mongolian Baiti", 9F);
-            this.button1_umów.Location = new System.Drawing.Point(158, 287);
+            this.button1_umów.Location = new System.Drawing.Point(298, 282);
             this.button1_umów.Name = "button1_umów";
-            this.button1_umów.Size = new System.Drawing.Size(231, 55);
+            this.button1_umów.Size = new System.Drawing.Size(124, 55);
             this.button1_umów.TabIndex = 6;
             this.button1_umów.Text = "UMÓW SIĘ ";
             this.button1_umów.UseVisualStyleBackColor = false;
@@ -75,17 +76,32 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
             this.dateTimePicker1.TabIndex = 4;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.AliceBlue;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.Location = new System.Drawing.Point(129, 282);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(124, 55);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "🔙";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // umow_wizyt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(557, 379);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1_umów);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.dateTimePicker1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "umow_wizyt";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UMÓWIENIE WIZYTY";
             this.Load += new System.EventHandler(this.umow_wizyt_Load);
             this.ResumeLayout(false);
@@ -99,5 +115,6 @@
         private System.Windows.Forms.Button button1_umów;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Button button1;
     }
 }

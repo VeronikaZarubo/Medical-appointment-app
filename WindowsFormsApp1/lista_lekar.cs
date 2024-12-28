@@ -68,5 +68,12 @@ namespace WindowsFormsApp1
         {
             lekarzDataGridView_CellContentClick(sender, e);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Menu menu = new Menu();
+            this.Hide();
+            menu.Show();
+        }
     }
 }
