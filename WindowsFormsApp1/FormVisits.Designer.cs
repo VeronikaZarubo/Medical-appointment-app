@@ -33,6 +33,7 @@ namespace WindowsFormsApp1
             this.listBoxScheduledVisits.Name = "listBoxScheduledVisits";
             this.listBoxScheduledVisits.Size = new System.Drawing.Size(300, 292);
             this.listBoxScheduledVisits.TabIndex = 0;
+            this.listBoxScheduledVisits.SelectedIndexChanged += new System.EventHandler(this.listBoxScheduledVisits_SelectedIndexChanged);
             // 
             // listBoxHistoryVisits
             // 
@@ -43,6 +44,7 @@ namespace WindowsFormsApp1
             this.listBoxHistoryVisits.Name = "listBoxHistoryVisits";
             this.listBoxHistoryVisits.Size = new System.Drawing.Size(300, 292);
             this.listBoxHistoryVisits.TabIndex = 1;
+            this.listBoxHistoryVisits.SelectedIndexChanged += new System.EventHandler(this.listBoxHistoryVisits_SelectedIndexChanged);
             // 
             // labelScheduled
             // 
@@ -50,7 +52,7 @@ namespace WindowsFormsApp1
             this.labelScheduled.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold);
             this.labelScheduled.Location = new System.Drawing.Point(50, 50);
             this.labelScheduled.Name = "labelScheduled";
-            this.labelScheduled.Size = new System.Drawing.Size(214, 29);
+            this.labelScheduled.Size = new System.Drawing.Size(244, 29);
             this.labelScheduled.TabIndex = 2;
             this.labelScheduled.Text = "Zaplanowane wizyty";
             // 
@@ -91,6 +93,7 @@ namespace WindowsFormsApp1
             this.Text = "Historia wizyt";
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
 
         #endregion

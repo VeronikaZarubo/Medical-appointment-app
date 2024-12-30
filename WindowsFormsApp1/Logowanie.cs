@@ -56,7 +56,7 @@ namespace WindowsFormsApp1
 
                     if (rd.HasRows)
                     {
-                        Menu newLevel = new Menu();
+                        Menu newLevel = new Menu(/*username*/); // + username dla visits
                         this.Hide();
                         newLevel.Show();
 

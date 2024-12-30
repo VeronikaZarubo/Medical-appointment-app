@@ -114,16 +114,24 @@ namespace WindowsFormsApp1
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            FormVisits wizyty = new FormVisits();
+            FormVisits visitsForm = new FormVisits(/*userEmail*/);
             this.Hide();
-            wizyty.Show();
+            visitsForm.Show();
         }
-
         private void button2_list_lekar_Click(object sender, EventArgs e)
         {
             lista_lekar lista_Lekar = new lista_lekar();
             this.Hide();
             lista_Lekar.Show();
         }
+
+        private string userEmail;
+
+        /* public Menu(string email) // Zakomentowany kod na wypadek, gdybyśmy organizowali zapisy wizyt w bazie danych;
+         {
+             InitializeComponent();
+             this.userEmail = email; // save email to use in visits
+         }*/
+
     }
 }
