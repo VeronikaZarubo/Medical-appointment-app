@@ -129,7 +129,7 @@
             this.button2_list_lekar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button2_list_lekar.Location = new System.Drawing.Point(32, 414);
             this.button2_list_lekar.Name = "button2_list_lekar";
-            this.button2_list_lekar.Size = new System.Drawing.Size(147, 62);
+            this.button2_list_lekar.Size = new System.Drawing.Size(176, 62);
             this.button2_list_lekar.TabIndex = 6;
             this.button2_list_lekar.Text = "Lista lekarze";
             this.button2_list_lekar.UseVisualStyleBackColor = false;

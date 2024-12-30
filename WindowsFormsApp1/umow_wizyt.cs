@@ -57,5 +57,12 @@ namespace WindowsFormsApp1
                 MessageBox.Show("Wyberz czas na wizytę", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            dod_info dod_Info = new dod_info();
+            this.Hide();
+            dod_Info.Show();
+        }
     }
 }

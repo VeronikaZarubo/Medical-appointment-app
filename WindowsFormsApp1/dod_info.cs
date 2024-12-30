@@ -42,6 +42,11 @@ namespace WindowsFormsApp1
 
         }
 
-        
+        private void button1_Click(object sender, EventArgs e)
+        {
+            lista_lekar lista_Lekar = new lista_lekar();
+            this.Hide();
+            lista_Lekar.Show();
+        }
     }
 }
