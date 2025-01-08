@@ -15,15 +15,15 @@ namespace WindowsFormsApp1
         // Переменные для хранения данных профиля
         private string name;
         private string surname;
-        private string login;
-        public Form3_profil(string name, string surname, string login)
+        private string username;
+        public Form3_profil(string name, string surname, string email)
         {
             InitializeComponent();
 
             // Сохраняем переданные данные в локальные переменные
             name = name;
             surname = surname;
-            login = login;
+            username = email;
 
             // Инициализация UI с данными пользователя
             DisplayUserProfile();
@@ -32,7 +32,7 @@ namespace WindowsFormsApp1
         {
             textBox1_imie.Text = name;
             textBox_nazwisko.Text = surname;
-            textBox_email.Text = login;
+            textBox_email.Text = username;
 
             // Отключаем редактирование полей
             textBox1_imie.ReadOnly = true;
@@ -45,13 +45,13 @@ namespace WindowsFormsApp1
         private void button1_Click(object sender, EventArgs e)
         {
             //Открываем окно редактирования
-            Form4_edycja_profilu Form4_edycja_Profilu = new Form4_edycja_profilu(name, surname, login);
+            Form4_edycja_profilu Form4_edycja_Profilu = new Form4_edycja_profilu(name, surname, username);
             // Если пользователь нажал "Сохранить", обновляем данные
             if (Form4_edycja_Profilu.ShowDialog() == DialogResult.OK)
             {
                 name = Form4_edycja_Profilu.UpdatedName;
                 surname = Form4_edycja_Profilu.UpdatedSurname;
-                login = Form4_edycja_Profilu.UpdatedEmail;
+                username = Form4_edycja_Profilu.UpdatedEmail;
 
                 DisplayUserProfile();
             }

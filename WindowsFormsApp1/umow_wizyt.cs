@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.OleDb;
 
 namespace WindowsFormsApp1
 {
@@ -15,11 +16,13 @@ namespace WindowsFormsApp1
         private string appointmentType;
 
         private string doctorName;
-        public umow_wizyt(string type, string doctor)
+        private string username;
+        public umow_wizyt(string type, string doctor, string email)
         {
             InitializeComponent();
             appointmentType = type;
             doctorName = doctor;
+            username = email;
         }
 
        
@@ -42,15 +45,62 @@ namespace WindowsFormsApp1
                 currentTime = currentTime.AddMinutes(30);
             }
         }
+        private bool IsTimeSlotAvailable(DateTime date, string time, string doctor)
+        {
+            string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Baza danych nowa.accdb";
+            using (OleDbConnection connection = new OleDbConnection(connectionString))
+            {
+                connection.Open();
+                string query = "SELECT COUNT(*) FROM Wizyta WHERE [Lekarz] = @Doctor AND [Data wizyty] = @Date AND [Czas] = @Time";
+                using (OleDbCommand command = new OleDbCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@Doctor", doctor);
+                    command.Parameters.AddWithValue("@Date", date.ToShortDateString());
+                    command.Parameters.AddWithValue("@Time", time);
+
+                    int count = (int)command.ExecuteScalar();
+                    return count == 0;  // Возвращает true, если время доступно
+                }
+            }
+        }
+        private void AddAppointment(string patientEmail, string doctor, DateTime date, string time)
+        {
+            string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Baza danych nowa.accdb";
+            using (OleDbConnection connection = new OleDbConnection(connectionString))
+            {
+                connection.Open();
+                string query = "INSERT INTO Wizyta (Pacjent, Lekarz, [Data wizyty], Czas) VALUES (@Patient, @Doctor, @Date, @Time)";
+                using (OleDbCommand command = new OleDbCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@Patient", patientEmail);
+                    command.Parameters.AddWithValue("@Doctor", doctor);
+                    command.Parameters.AddWithValue("@Date", date.ToShortDateString());
+                    command.Parameters.AddWithValue("@Time", time);
+
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
 
         private void button1_umów_Click(object sender, EventArgs e)
         {
-            if (listBox1.SelectedItems != null)
+            if (listBox1.SelectedItem != null)
             {
                 string selectedTime = listBox1.SelectedItem.ToString();
-                MessageBox.Show($"Twoja {appointmentType} do lekarza {doctorName} na {dateTimePicker1.Value.ToShortDateString()} o {selectedTime}.",
-               "Wizyta została podtwierdzona!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Close();
+                DateTime selectedDate = dateTimePicker1.Value;
+
+                if (IsTimeSlotAvailable(selectedDate, selectedTime, doctorName))
+                {
+                    AddAppointment(username, doctorName, selectedDate, selectedTime);
+
+                    MessageBox.Show($"Twoja {appointmentType} do lekarza {doctorName} na {selectedDate.ToShortDateString()} o {selectedTime}.",
+                    "Wizyta została podtwierdzona!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Wybrane czas i data są już zajęte, wybierz inny termin.", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             else
             {
