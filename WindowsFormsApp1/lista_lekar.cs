@@ -22,7 +22,6 @@ namespace WindowsFormsApp1
             this.Validate();
             this.lekarzBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.baza_danych_nowaDataSet);
-
         }
 
         private void lista_lekar_Load(object sender, EventArgs e)
@@ -31,7 +30,6 @@ namespace WindowsFormsApp1
             this.lekarzTableAdapter.Fill(this.baza_danych_nowaDataSet.Lekarz);
             lekarzDataGridView.Columns["dataGridViewTextBoxColumn7"].Visible = false;
             lekarzDataGridView.Columns["dataGridViewTextBoxColumn8"].Visible = false;
-
         }
 
         private void lekarzDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -47,7 +45,6 @@ namespace WindowsFormsApp1
 
                 string dodatkoweinformacje = selectedrow.Cells["dataGridViewTextBoxColumn7"].Value.ToString();
 
-
                 dod_info detailsForm = new dod_info();
                 detailsForm.SetDoctorDetails(imięLekarza, nazwiskoLekarza, wiek, specjalizacja, dodatkoweinformacje, cennikUsług);
                 detailsForm.ShowDialog();
@@ -56,7 +53,6 @@ namespace WindowsFormsApp1
             {
                 MessageBox.Show("Wybierz lekarza", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
         }
 
         private void lekarzDataGridView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)

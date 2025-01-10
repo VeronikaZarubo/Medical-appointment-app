@@ -47,7 +47,6 @@ namespace WindowsFormsApp1
                         listBoxScheduledVisits.Items.Add(visit);
                     }
                 }
-
                 
                 string queryHistory = @"
                     SELECT [Data wizyty], 
@@ -113,7 +112,6 @@ namespace WindowsFormsApp1
             }
             else
             {
-
                 MessageBox.Show("Nie można odczytać danych wizyty.",
                     "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }

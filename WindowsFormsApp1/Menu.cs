@@ -39,7 +39,6 @@ namespace WindowsFormsApp1
             {
                 form.ShowDialog(); // Открываем форму модально
             }
-
         }
 
         private void button1_Click(object sender, EventArgs e)

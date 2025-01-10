@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(umow_wizyt));
             this.label1 = new System.Windows.Forms.Label();
             this.button1_umów = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
@@ -40,11 +39,12 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Mongolian Baiti", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.MidnightBlue;
             this.label1.Location = new System.Drawing.Point(124, 45);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(324, 30);
+            this.label1.Size = new System.Drawing.Size(334, 30);
             this.label1.TabIndex = 7;
-            this.label1.Text = "WYBERZ CZAS I DATĘ";
+            this.label1.Text = "WYBIERZ CZAS I DATĘ";
             // 
             // button1_umów
             // 
@@ -92,8 +92,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(557, 379);
+            this.BackColor = System.Drawing.Color.PowderBlue;
+            this.ClientSize = new System.Drawing.Size(586, 379);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1_umów);
@@ -102,7 +102,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "umow_wizyt";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "UMÓWIENIE WIZYTY";
+            this.Text = "Umówienie wizyty";
             this.Load += new System.EventHandler(this.umow_wizyt_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -26,7 +26,7 @@ namespace WindowsFormsApp1
             // 
             // listBoxScheduledVisits
             // 
-            this.listBoxScheduledVisits.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.listBoxScheduledVisits.BackColor = System.Drawing.Color.Azure;
             this.listBoxScheduledVisits.FormattingEnabled = true;
             this.listBoxScheduledVisits.ItemHeight = 16;
             this.listBoxScheduledVisits.Location = new System.Drawing.Point(50, 100);
@@ -37,7 +37,7 @@ namespace WindowsFormsApp1
             // 
             // listBoxHistoryVisits
             // 
-            this.listBoxHistoryVisits.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.listBoxHistoryVisits.BackColor = System.Drawing.Color.Azure;
             this.listBoxHistoryVisits.FormattingEnabled = true;
             this.listBoxHistoryVisits.ItemHeight = 16;
             this.listBoxHistoryVisits.Location = new System.Drawing.Point(400, 100);
@@ -68,26 +68,28 @@ namespace WindowsFormsApp1
             // 
             // buttonHome
             // 
+            this.buttonHome.BackColor = System.Drawing.Color.AliceBlue;
             this.buttonHome.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold);
             this.buttonHome.Location = new System.Drawing.Point(750, 20);
             this.buttonHome.Name = "buttonHome";
             this.buttonHome.Size = new System.Drawing.Size(100, 40);
             this.buttonHome.TabIndex = 4;
             this.buttonHome.Text = "🏠";
+            this.buttonHome.UseVisualStyleBackColor = false;
             this.buttonHome.Click += new System.EventHandler(this.buttonHome_Click);
             // 
             // FormVisits
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightCyan;
+            this.BackColor = System.Drawing.Color.PowderBlue;
             this.ClientSize = new System.Drawing.Size(900, 500);
             this.Controls.Add(this.listBoxScheduledVisits);
             this.Controls.Add(this.listBoxHistoryVisits);
             this.Controls.Add(this.labelScheduled);
             this.Controls.Add(this.labelHistory);
             this.Controls.Add(this.buttonHome);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FormVisits";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Historia wizyt";

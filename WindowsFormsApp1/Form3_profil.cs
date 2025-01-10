@@ -39,7 +39,6 @@ namespace WindowsFormsApp1
             textBox_nazwisko.ReadOnly = true;
             textBox_email.ReadOnly = true;
             // SetReadOnly(true);
-
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -55,7 +54,6 @@ namespace WindowsFormsApp1
 
                 DisplayUserProfile();
             }
-
         }
 
         private void button2_Click(object sender, EventArgs e)

@@ -24,7 +24,6 @@ namespace WindowsFormsApp1
             doctorName = doctor;
             username = email;
         }
-
        
         private void umow_wizyt_Load(object sender, EventArgs e)
         {
@@ -45,6 +44,7 @@ namespace WindowsFormsApp1
                 currentTime = currentTime.AddMinutes(30);
             }
         }
+
         private bool IsTimeSlotAvailable(DateTime date, string time, string doctor)
         {
             string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Baza danych nowa.accdb";
@@ -63,6 +63,7 @@ namespace WindowsFormsApp1
                 }
             }
         }
+
         private void AddAppointment(string patientEmail, string doctor, DateTime date, string time)
         {
             string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Baza danych nowa.accdb";

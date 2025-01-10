@@ -1,16 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
-using System.Data.SqlClient;
-using WindowsFormsApp1;
-using System.Security.Cryptography.X509Certificates;
 
 namespace WindowsFormsApp1
 {
@@ -73,7 +63,6 @@ namespace WindowsFormsApp1
                         MessageBox.Show("Invalid username or password.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
-
             }
             catch (Exception ex)
             {
