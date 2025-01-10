@@ -17,6 +17,7 @@ namespace WindowsFormsApp1
 
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormVisits));
             this.listBoxScheduledVisits = new System.Windows.Forms.ListBox();
             this.listBoxHistoryVisits = new System.Windows.Forms.ListBox();
             this.labelScheduled = new System.Windows.Forms.Label();
@@ -90,6 +91,7 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.labelHistory);
             this.Controls.Add(this.buttonHome);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormVisits";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Historia wizyt";
