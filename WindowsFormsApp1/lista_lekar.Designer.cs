@@ -181,7 +181,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "lista_lekar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "LISTA LEKARZE";
+            this.Text = "Lista lekarze";
             this.Load += new System.EventHandler(this.lista_lekar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.lekarzDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lekarzBindingSource)).EndInit();
