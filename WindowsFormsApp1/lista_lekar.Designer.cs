@@ -43,6 +43,7 @@
             this.lekarzTableAdapter = new WindowsFormsApp1.Baza_danych_nowaDataSetTableAdapters.LekarzTableAdapter();
             this.tableAdapterManager = new WindowsFormsApp1.Baza_danych_nowaDataSetTableAdapters.TableAdapterManager();
             this.button1 = new System.Windows.Forms.Button();
+            this.opisPostepu = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.lekarzDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lekarzBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.baza_danych_nowaDataSet)).BeginInit();
@@ -50,6 +51,10 @@
             // 
             // lekarzDataGridView
             // 
+            this.lekarzDataGridView.AllowUserToAddRows = false;
+            this.lekarzDataGridView.AllowUserToDeleteRows = false;
+            this.lekarzDataGridView.AllowUserToResizeColumns = false;
+            this.lekarzDataGridView.AllowUserToResizeRows = false;
             this.lekarzDataGridView.AutoGenerateColumns = false;
             this.lekarzDataGridView.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.lekarzDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -62,12 +67,12 @@
             this.dataGridViewTextBoxColumn8});
             this.lekarzDataGridView.DataSource = this.lekarzBindingSource;
             this.lekarzDataGridView.EnableHeadersVisualStyles = false;
-            this.lekarzDataGridView.Location = new System.Drawing.Point(29, 73);
+            this.lekarzDataGridView.Location = new System.Drawing.Point(29, 126);
             this.lekarzDataGridView.Name = "lekarzDataGridView";
             this.lekarzDataGridView.RowHeadersVisible = false;
             this.lekarzDataGridView.RowHeadersWidth = 51;
             this.lekarzDataGridView.RowTemplate.Height = 24;
-            this.lekarzDataGridView.Size = new System.Drawing.Size(774, 343);
+            this.lekarzDataGridView.Size = new System.Drawing.Size(774, 290);
             this.lekarzDataGridView.TabIndex = 1;
             this.lekarzDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.lekarzDataGridView_CellClick);
             this.lekarzDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.lekarzDataGridView_CellContentClick);
@@ -157,7 +162,7 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.Azure;
+            this.button1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.button1.Font = new System.Drawing.Font("Mongolian Baiti", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(725, 12);
             this.button1.Name = "button1";
@@ -167,6 +172,17 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // opisPostepu
+            // 
+            this.opisPostepu.AutoSize = true;
+            this.opisPostepu.BackColor = System.Drawing.Color.Transparent;
+            this.opisPostepu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.opisPostepu.Location = new System.Drawing.Point(34, 79);
+            this.opisPostepu.Name = "opisPostepu";
+            this.opisPostepu.Size = new System.Drawing.Size(422, 20);
+            this.opisPostepu.TabIndex = 4;
+            this.opisPostepu.Text = "Kliknij, żeby dowiedzieć się więcej o wybranym lekarze!";
+            // 
             // lista_lekar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -174,6 +190,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(832, 453);
+            this.Controls.Add(this.opisPostepu);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lekarzDataGridView);
@@ -206,5 +223,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label opisPostepu;
     }
 }
