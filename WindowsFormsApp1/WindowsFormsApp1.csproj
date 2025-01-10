@@ -76,6 +76,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Baza_danych_nowaDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Dane.cs" />
     <Compile Include="dod_info.cs">
       <SubType>Form</SubType>
     </Compile>

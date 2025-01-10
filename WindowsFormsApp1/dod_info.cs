@@ -33,13 +33,13 @@ namespace WindowsFormsApp1
         }
         private void button1_konsul_Click(object sender, EventArgs e)
         {
-            umow_wizyt wizytaform = new umow_wizyt("Konsultacja", doctorName, username);
+            umow_wizyt wizytaform = new umow_wizyt("Konsultacja", doctorName);
             wizytaform.ShowDialog();
         }
 
         private void button2_wiz_Click(object sender, EventArgs e)
         {
-            umow_wizyt wizytaform = new umow_wizyt("Wizyta", doctorName, username);
+            umow_wizyt wizytaform = new umow_wizyt("Wizyta", doctorName);
             wizytaform.ShowDialog();
 
         }

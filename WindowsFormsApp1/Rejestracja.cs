@@ -106,6 +106,10 @@ namespace WindowsFormsApp1
 
         private void bt_swichToLogin_Click(object sender, EventArgs e)
         {
+            Dane.Name = textBox_name.Text;
+            Dane.Surname = textBox_surname.Text;
+            Dane.Username = textBox_email.Text;
+
             Logowanie newLevel = new Logowanie();
             this.Hide();
             newLevel.Show();

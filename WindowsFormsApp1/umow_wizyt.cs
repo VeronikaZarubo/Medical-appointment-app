@@ -16,13 +16,11 @@ namespace WindowsFormsApp1
         private string appointmentType;
 
         private string doctorName;
-        private string username;
-        public umow_wizyt(string type, string doctor, string email)
+        public umow_wizyt(string type, string doctor)
         {
             InitializeComponent();
             appointmentType = type;
             doctorName = doctor;
-            username = email;
         }
        
         private void umow_wizyt_Load(object sender, EventArgs e)
@@ -45,7 +43,7 @@ namespace WindowsFormsApp1
             }
         }
 
-        private bool IsTimeSlotAvailable(DateTime date, string time, string doctor)
+        /*private bool IsTimeSlotAvailable(DateTime date, string time, string doctor)
         {
             string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Baza danych nowa.accdb";
             using (OleDbConnection connection = new OleDbConnection(connectionString))
@@ -62,9 +60,9 @@ namespace WindowsFormsApp1
                     return count == 0;  // Возвращает true, если время доступно
                 }
             }
-        }
+        }*/
 
-        private void AddAppointment(string patientEmail, string doctor, DateTime date, string time)
+       /* private void AddAppointment(string patientEmail, string doctor, DateTime date, string time)
         {
             string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Baza danych nowa.accdb";
             using (OleDbConnection connection = new OleDbConnection(connectionString))
@@ -81,27 +79,16 @@ namespace WindowsFormsApp1
                     command.ExecuteNonQuery();
                 }
             }
-        }
+        }*/
 
         private void button1_umów_Click(object sender, EventArgs e)
         {
-            if (listBox1.SelectedItem != null)
+            if (listBox1.SelectedItems != null)
             {
                 string selectedTime = listBox1.SelectedItem.ToString();
-                DateTime selectedDate = dateTimePicker1.Value;
-
-                if (IsTimeSlotAvailable(selectedDate, selectedTime, doctorName))
-                {
-                    AddAppointment(username, doctorName, selectedDate, selectedTime);
-
-                    MessageBox.Show($"Twoja {appointmentType} do lekarza {doctorName} na {selectedDate.ToShortDateString()} o {selectedTime}.",
-                    "Wizyta została podtwierdzona!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Close();
-                }
-                else
-                {
-                    MessageBox.Show("Wybrane czas i data są już zajęte, wybierz inny termin.", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                MessageBox.Show($"Twoja {appointmentType} do lekarza {doctorName} na {dateTimePicker1.Value.ToShortDateString()} o {selectedTime}.",
+               "Wizyta została podtwierdzona!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
             }
             else
             {

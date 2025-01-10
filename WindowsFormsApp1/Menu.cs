@@ -35,7 +35,7 @@ namespace WindowsFormsApp1
         private void button1_Moj_profil_Click(object sender, EventArgs e)
         {
             // Передаем данные пользователя в конструктор формы profil
-            using (Form3_profil form = new Form3_profil(name, surname, login))
+            using (Form3_profil form = new Form3_profil())
             {
                 form.ShowDialog(); // Открываем форму модально
             }

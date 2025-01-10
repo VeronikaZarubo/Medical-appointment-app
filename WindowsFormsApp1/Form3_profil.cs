@@ -15,24 +15,21 @@ namespace WindowsFormsApp1
         // Переменные для хранения данных профиля
         private string name;
         private string surname;
-        private string username;
-        public Form3_profil(string name, string surname, string email)
+        private string login;
+        public Form3_profil()
         {
             InitializeComponent();
 
-            // Сохраняем переданные данные в локальные переменные
-            name = name;
-            surname = surname;
-            username = email;
+            textBox1_imie.Text = Dane.Name;
+            textBox_nazwisko.Text = Dane.Surname;
+            textBox_email.Text = Dane.Username;
 
             // Инициализация UI с данными пользователя
             DisplayUserProfile();
         }
         private void DisplayUserProfile()
         {
-            textBox1_imie.Text = name;
-            textBox_nazwisko.Text = surname;
-            textBox_email.Text = username;
+            
 
             // Отключаем редактирование полей
             textBox1_imie.ReadOnly = true;
@@ -44,13 +41,13 @@ namespace WindowsFormsApp1
         private void button1_Click(object sender, EventArgs e)
         {
             //Открываем окно редактирования
-            Form4_edycja_profilu Form4_edycja_Profilu = new Form4_edycja_profilu(name, surname, username);
+            Form4_edycja_profilu Form4_edycja_Profilu = new Form4_edycja_profilu(textBox1_imie.Text, textBox_nazwisko.Text, textBox_email.Text);
             // Если пользователь нажал "Сохранить", обновляем данные
             if (Form4_edycja_Profilu.ShowDialog() == DialogResult.OK)
             {
-                name = Form4_edycja_Profilu.UpdatedName;
-                surname = Form4_edycja_Profilu.UpdatedSurname;
-                username = Form4_edycja_Profilu.UpdatedEmail;
+                textBox1_imie.Text = Form4_edycja_Profilu.UpdatedName;
+                textBox_nazwisko.Text = Form4_edycja_Profilu.UpdatedSurname;
+                textBox_email.Text = Form4_edycja_Profilu.UpdatedEmail;
 
                 DisplayUserProfile();
             }
