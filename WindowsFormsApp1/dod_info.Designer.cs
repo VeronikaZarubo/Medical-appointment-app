@@ -86,7 +86,7 @@
             this.button1_konsul.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1_konsul.Location = new System.Drawing.Point(598, 28);
             this.button1_konsul.Name = "button1_konsul";
-            this.button1_konsul.Size = new System.Drawing.Size(163, 50);
+            this.button1_konsul.Size = new System.Drawing.Size(163, 60);
             this.button1_konsul.TabIndex = 40;
             this.button1_konsul.Text = "Umówić się na konsultacje ";
             this.button1_konsul.UseVisualStyleBackColor = false;
