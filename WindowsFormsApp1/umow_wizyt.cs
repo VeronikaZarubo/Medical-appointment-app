@@ -38,14 +38,60 @@ namespace WindowsFormsApp1
         }
         private void LoadAvailableTimeSlots()
         {
-            listBox1.Items.Clear();
-            DateTime currentTime = dateTimePicker1.Value.Date.AddHours(8);
+            /* listBox1.Items.Clear();
+             DateTime currentTime = dateTimePicker1.Value.Date.AddHours(8);
 
-            while (currentTime.Hour < 18)
+             while (currentTime.Hour < 18)
+             {
+                 listBox1.Items.Add(currentTime.ToString("HH:mm"));
+                 currentTime = currentTime.AddMinutes(30);
+             }*/
+
+            listBox1.Items.Clear(); // Очистка списка времени.
+            DateTime currentTime = dateTimePicker1.Value.Date.AddHours(8); // Начало рабочего дня (8:00).
+            DateTime endTime = dateTimePicker1.Value.Date.AddHours(18); // Конец рабочего дня (18:00).
+
+            try
             {
-                listBox1.Items.Add(currentTime.ToString("HH:mm"));
-                currentTime = currentTime.AddMinutes(30);
+                connection.Open();
+                string query = "SELECT [Data wizyty] FROM Wizyta WHERE Lekarz = @Lekarz AND FORMAT([Data wizyty], 'Short Date') = @SelectedDate";
+                using (OleDbCommand command = new OleDbCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@Lekarz", Dane.Doctorname); // Имя врача.
+                    command.Parameters.AddWithValue("@SelectedDate", dateTimePicker1.Value.ToShortDateString()); // Выбранная дата.
+
+                    OleDbDataReader reader = command.ExecuteReader();
+                    HashSet<string> occupiedSlots = new HashSet<string>();
+
+                    // Сохраняем занятые временные слоты.
+                    while (reader.Read())
+                    {
+                        DateTime busyTime = Convert.ToDateTime(reader["Data wizyty"]);
+                        occupiedSlots.Add(busyTime.ToString("HH:mm"));
+                    }
+                    reader.Close();
+
+                    // Добавляем только свободные временные слоты.
+                    while (currentTime < endTime)
+                    {
+                        string timeSlot = currentTime.ToString("HH:mm");
+                        if (!occupiedSlots.Contains(timeSlot)) // Проверяем, свободно ли время.
+                        {
+                            listBox1.Items.Add(timeSlot); // Добавляем только свободное время.
+                        }
+                        currentTime = currentTime.AddMinutes(30); // Шаг в 30 минут.
+                    }
+                }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ошибка при загрузке времени: " + ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                connection.Close(); // Закрываем подключение к базе.
+            }
+           
         }
             
              
