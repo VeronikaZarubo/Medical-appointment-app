@@ -46,6 +46,8 @@ namespace WindowsFormsApp1
 
                     if (rd.HasRows)
                     {
+                        Dane.Username= tb_login.Text;
+
                         Menu newLevel = new Menu(/*username*/); // + username dla visits
                         this.Hide();
                         newLevel.Show();

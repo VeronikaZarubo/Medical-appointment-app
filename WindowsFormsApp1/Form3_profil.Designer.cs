@@ -158,6 +158,7 @@
             this.Name = "Form3_profil";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Profil użytkownika";
+            this.Load += new System.EventHandler(this.Form3_profil_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
