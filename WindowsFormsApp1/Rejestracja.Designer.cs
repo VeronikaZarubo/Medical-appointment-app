@@ -31,8 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Rejestracja));
             this.label_name = new System.Windows.Forms.Label();
             this.label_surname = new System.Windows.Forms.Label();
-            this.textBox_name = new System.Windows.Forms.TextBox();
             this.textBox_surname = new System.Windows.Forms.TextBox();
+            this.textBox_name = new System.Windows.Forms.TextBox();
             this.bt_createAccount = new System.Windows.Forms.Button();
             this.bt_swichToLogin = new System.Windows.Forms.Button();
             this.textBox_email = new System.Windows.Forms.TextBox();
@@ -64,21 +64,21 @@
             this.label_surname.TabIndex = 1;
             this.label_surname.Text = "Nazwisko";
             // 
-            // textBox_name
-            // 
-            this.textBox_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            this.textBox_name.Location = new System.Drawing.Point(784, 159);
-            this.textBox_name.Name = "textBox_name";
-            this.textBox_name.Size = new System.Drawing.Size(183, 30);
-            this.textBox_name.TabIndex = 2;
-            // 
             // textBox_surname
             // 
             this.textBox_surname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
             this.textBox_surname.Location = new System.Drawing.Point(784, 212);
             this.textBox_surname.Name = "textBox_surname";
             this.textBox_surname.Size = new System.Drawing.Size(183, 30);
-            this.textBox_surname.TabIndex = 3;
+            this.textBox_surname.TabIndex = 2;
+            // 
+            // textBox_name
+            // 
+            this.textBox_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.textBox_name.Location = new System.Drawing.Point(784, 159);
+            this.textBox_name.Name = "textBox_name";
+            this.textBox_name.Size = new System.Drawing.Size(183, 30);
+            this.textBox_name.TabIndex = 3;
             // 
             // bt_createAccount
             // 
@@ -181,8 +181,8 @@
             this.Controls.Add(this.textBox_email);
             this.Controls.Add(this.bt_swichToLogin);
             this.Controls.Add(this.bt_createAccount);
-            this.Controls.Add(this.textBox_surname);
             this.Controls.Add(this.textBox_name);
+            this.Controls.Add(this.textBox_surname);
             this.Controls.Add(this.label_surname);
             this.Controls.Add(this.label_name);
             this.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -202,8 +202,8 @@
 
         private System.Windows.Forms.Label label_name;
         private System.Windows.Forms.Label label_surname;
-        private System.Windows.Forms.TextBox textBox_name;
         private System.Windows.Forms.TextBox textBox_surname;
+        private System.Windows.Forms.TextBox textBox_name;
         private System.Windows.Forms.Button bt_createAccount;
         private System.Windows.Forms.Button bt_swichToLogin;
         private System.Windows.Forms.TextBox textBox_email;

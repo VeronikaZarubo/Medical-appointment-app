@@ -11,5 +11,7 @@ namespace WindowsFormsApp1
         public static string Name { get; set; }
         public static string Surname { get; set; }
         public static string Username { get; set; }
+        public static string Doctorname { get; set; }
+
     }
 }

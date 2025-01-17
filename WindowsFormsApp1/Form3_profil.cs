@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.OleDb;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,20 +13,62 @@ namespace WindowsFormsApp1
 {
     public partial class Form3_profil : Form
     {
-        // Переменные для хранения данных профиля
-        private string name;
-        private string surname;
-        private string login;
+        private OleDbConnection connection;
+        public static OleDbDataReader rd;
         public Form3_profil()
         {
             InitializeComponent();
 
-            textBox1_imie.Text = Dane.Name;
-            textBox_nazwisko.Text = Dane.Surname;
-            textBox_email.Text = Dane.Username;
+            
+            string connectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Baza danych nowa.accdb;";
+            connection = new OleDbConnection(connectionString);
 
             // Инициализация UI с данными пользователя
             DisplayUserProfile();
+        }
+        
+        private void Form3_profil_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                connection.Open();
+
+                string query = "SELECT [Imię pacjenta], [Nazwisko pacjenta] FROM Pacjent WHERE Email = @Email";
+
+                using (OleDbCommand command = new OleDbCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@Email", Dane.Username);
+
+                    using (OleDbDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            // Получаем имя и фамилию из базы данных
+                            string name = reader["Imię pacjenta"].ToString();
+                            string surname = reader["Nazwisko pacjenta"].ToString();
+
+                            // Отображаем данные на форме
+                            textBox1_imie.Text = name;
+                            textBox_nazwisko.Text = surname;
+                            textBox_email.Text = Dane.Username;
+                        }
+                        else
+                        {
+                            MessageBox.Show("User not found in the database.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+            finally
+            {
+                connection.Close();
+
+            }
         }
         private void DisplayUserProfile()
         {
@@ -59,5 +102,7 @@ namespace WindowsFormsApp1
             this.Hide();
             menu.Show();
         }
+
+       
     }
 }

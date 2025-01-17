@@ -15,14 +15,19 @@ namespace WindowsFormsApp1
     {
         private string appointmentType;
 
-        private string doctorName;
-        public umow_wizyt(string type, string doctor)
+        private string connectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Baza danych nowa.accdb;";
+        private OleDbConnection connection;
+
+        
+        public umow_wizyt(string type)
         {
             InitializeComponent();
             appointmentType = type;
-            doctorName = doctor;
+            connection = new OleDbConnection(connectionString);
+
+
         }
-       
+
         private void umow_wizyt_Load(object sender, EventArgs e)
         {
 
@@ -33,68 +38,115 @@ namespace WindowsFormsApp1
         }
         private void LoadAvailableTimeSlots()
         {
-            listBox1.Items.Clear();
-            DateTime currentTime = dateTimePicker1.Value.Date.AddHours(8);
+            /* listBox1.Items.Clear();
+             DateTime currentTime = dateTimePicker1.Value.Date.AddHours(8);
 
-            while (currentTime.Hour < 18)
+             while (currentTime.Hour < 18)
+             {
+                 listBox1.Items.Add(currentTime.ToString("HH:mm"));
+                 currentTime = currentTime.AddMinutes(30);
+             }*/
+
+            listBox1.Items.Clear(); // Очистка списка времени.
+            DateTime currentTime = dateTimePicker1.Value.Date.AddHours(8); // Начало рабочего дня (8:00).
+            DateTime endTime = dateTimePicker1.Value.Date.AddHours(18); // Конец рабочего дня (18:00).
+
+            try
             {
-                listBox1.Items.Add(currentTime.ToString("HH:mm"));
-                currentTime = currentTime.AddMinutes(30);
+                connection.Open();
+                string query = "SELECT [Data wizyty] FROM Wizyta WHERE Lekarz = @Lekarz AND FORMAT([Data wizyty], 'Short Date') = @SelectedDate";
+                using (OleDbCommand command = new OleDbCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@Lekarz", Dane.Doctorname); // Имя врача.
+                    command.Parameters.AddWithValue("@SelectedDate", dateTimePicker1.Value.ToShortDateString()); // Выбранная дата.
+
+                    OleDbDataReader reader = command.ExecuteReader();
+                    HashSet<string> occupiedSlots = new HashSet<string>();
+
+                    // Сохраняем занятые временные слоты.
+                    while (reader.Read())
+                    {
+                        DateTime busyTime = Convert.ToDateTime(reader["Data wizyty"]);
+                        occupiedSlots.Add(busyTime.ToString("HH:mm"));
+                    }
+                    reader.Close();
+
+                    // Добавляем только свободные временные слоты.
+                    while (currentTime < endTime)
+                    {
+                        string timeSlot = currentTime.ToString("HH:mm");
+                        if (!occupiedSlots.Contains(timeSlot)) // Проверяем, свободно ли время.
+                        {
+                            listBox1.Items.Add(timeSlot); // Добавляем только свободное время.
+                        }
+                        currentTime = currentTime.AddMinutes(30); // Шаг в 30 минут.
+                    }
+                }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ошибка при загрузке времени: " + ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                connection.Close(); // Закрываем подключение к базе.
+            }
+           
         }
-
-        /*private bool IsTimeSlotAvailable(DateTime date, string time, string doctor)
-        {
-            string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Baza danych nowa.accdb";
-            using (OleDbConnection connection = new OleDbConnection(connectionString))
-            {
-                connection.Open();
-                string query = "SELECT COUNT(*) FROM Wizyta WHERE [Lekarz] = @Doctor AND [Data wizyty] = @Date AND [Czas] = @Time";
-                using (OleDbCommand command = new OleDbCommand(query, connection))
-                {
-                    command.Parameters.AddWithValue("@Doctor", doctor);
-                    command.Parameters.AddWithValue("@Date", date.ToShortDateString());
-                    command.Parameters.AddWithValue("@Time", time);
-
-                    int count = (int)command.ExecuteScalar();
-                    return count == 0;  // Возвращает true, если время доступно
-                }
-            }
-        }*/
-
-       /* private void AddAppointment(string patientEmail, string doctor, DateTime date, string time)
-        {
-            string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Baza danych nowa.accdb";
-            using (OleDbConnection connection = new OleDbConnection(connectionString))
-            {
-                connection.Open();
-                string query = "INSERT INTO Wizyta (Pacjent, Lekarz, [Data wizyty], Czas) VALUES (@Patient, @Doctor, @Date, @Time)";
-                using (OleDbCommand command = new OleDbCommand(query, connection))
-                {
-                    command.Parameters.AddWithValue("@Patient", patientEmail);
-                    command.Parameters.AddWithValue("@Doctor", doctor);
-                    command.Parameters.AddWithValue("@Date", date.ToShortDateString());
-                    command.Parameters.AddWithValue("@Time", time);
-
-                    command.ExecuteNonQuery();
-                }
-            }
-        }*/
+            
+             
 
         private void button1_umów_Click(object sender, EventArgs e)
         {
             if (listBox1.SelectedItems != null)
             {
+                string selectedDate = dateTimePicker1.Value.ToString("yyyy-MM-dd");
                 string selectedTime = listBox1.SelectedItem.ToString();
-                MessageBox.Show($"Twoja {appointmentType} do lekarza {doctorName} na {dateTimePicker1.Value.ToShortDateString()} o {selectedTime}.",
-               "Wizyta została podtwierdzona!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Close();
+                string fullDateTime = $"{selectedDate} {selectedTime}";
+                try
+                {
+                    // Открываем соединение с базой данных
+                    connection.Open();
+
+                    // SQL-запрос для добавления записи в таблицу Wizyta
+                    string query = "INSERT INTO Wizyta ([Pacjent], [Lekarz], [Data wizyty]) VALUES (@Pacjent, @Lekarz, @DataWizyty)";
+
+                    using (OleDbCommand command = new OleDbCommand(query, connection))
+                    {
+                        // Добавляем параметры
+                        command.Parameters.AddWithValue("@Pacjent", Dane.Username); // Электронная почта пациента из класса Dane
+                        command.Parameters.AddWithValue("@Lekarz", Dane.Doctorname); // Имя врача
+                        command.Parameters.AddWithValue("@DataWizyty", DateTime.Parse(fullDateTime)); // Дата и время визита
+
+                        // Выполняем запрос
+                        command.ExecuteNonQuery();
+                    }
+
+                    // Уведомляем пользователя
+                    MessageBox.Show(
+                        $"Twoja {appointmentType} do lekarza {Dane.Doctorname} została zapisana na {selectedDate} o godzinie {selectedTime}.",
+                        "Sukces",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Information
+                    );
+
+                    this.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Wystąpił błąd: {ex.Message}", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                finally
+                {
+                    connection.Close();
+                }
             }
             else
             {
                 MessageBox.Show("Wyberz czas na wizytę", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
+        
+    }
 
         private void button1_Click(object sender, EventArgs e)
         {

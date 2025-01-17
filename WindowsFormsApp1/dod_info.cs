@@ -13,7 +13,6 @@ namespace WindowsFormsApp1
     public partial class dod_info : Form
     {
         private string doctorName;
-        private string username;
 
         public dod_info()
         {
@@ -33,13 +32,17 @@ namespace WindowsFormsApp1
         }
         private void button1_konsul_Click(object sender, EventArgs e)
         {
-            umow_wizyt wizytaform = new umow_wizyt("Konsultacja", doctorName);
+            Dane.Doctorname = label3_nazwisko.Text;
+
+            umow_wizyt wizytaform = new umow_wizyt("Konsultacja");
             wizytaform.ShowDialog();
         }
 
         private void button2_wiz_Click(object sender, EventArgs e)
         {
-            umow_wizyt wizytaform = new umow_wizyt("Wizyta", doctorName);
+            Dane.Doctorname = label3_nazwisko.Text;
+
+            umow_wizyt wizytaform = new umow_wizyt("Wizyta");
             wizytaform.ShowDialog();
 
         }

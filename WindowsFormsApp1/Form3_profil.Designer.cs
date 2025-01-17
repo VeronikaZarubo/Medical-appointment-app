@@ -57,7 +57,7 @@
             this.button1.Location = new System.Drawing.Point(376, 276);
             this.button1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(149, 54);
+            this.button1.Size = new System.Drawing.Size(149, 71);
             this.button1.TabIndex = 25;
             this.button1.Text = "EDYCJA DANYCH ";
             this.button1.UseVisualStyleBackColor = false;
@@ -118,7 +118,7 @@
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button2.Location = new System.Drawing.Point(92, 277);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(149, 54);
+            this.button2.Size = new System.Drawing.Size(149, 70);
             this.button2.TabIndex = 28;
             this.button2.Text = "🏠";
             this.button2.UseVisualStyleBackColor = false;
@@ -158,6 +158,7 @@
             this.Name = "Form3_profil";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Profil użytkownika";
+            this.Load += new System.EventHandler(this.Form3_profil_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
