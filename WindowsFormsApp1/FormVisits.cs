@@ -27,42 +27,59 @@ namespace WindowsFormsApp1
             {
                 connection.Open();
 
-                string queryScheduled = @"
-                    SELECT [Data wizyty], 
-                           [Lekarz].[Imię lekarza] 
-                    FROM [Wizyta] 
-                    INNER JOIN [Lekarz] ON [Wizyta].[Lekarz] = [Lekarz].[Identyfikator lekarza]
-                    WHERE [Data wizyty] >= Date()";
+                string queryScheduled = $@"
+            SELECT 
+                [Wizyta].[Data wizyty],
+                [Lekarz].[Imię lekarza]
+            FROM 
+                ([Wizyta]
+                 INNER JOIN [Lekarz] ON [Wizyta].[Lekarz] = [Lekarz].[Identyfikator lekarza])
+                INNER JOIN [Pacjent] ON [Wizyta].[Pacjent] = [Pacjent].[Identyfikator pacjenta]
+            WHERE 
+                [Wizyta].[Data wizyty] >= Date()
+                AND [Pacjent].[Email] = '{Dane.Username}'";
 
                 using (OleDbCommand command = new OleDbCommand(queryScheduled, connection))
                 using (OleDbDataReader reader = command.ExecuteReader())
                 {
                     while (reader.Read())
                     {
-                        
-                        string dateTime = reader.IsDBNull(0) ? "Brak daty" : reader.GetDateTime(0).ToString("dd.MM.yyyy HH:mm");
-                        string doctor = reader.IsDBNull(1) ? "Brak lekarza" : reader.GetString(1);
+                        string dateTime = reader.IsDBNull(0)
+                            ? "Brak daty"
+                            : reader.GetDateTime(0).ToString("dd.MM.yyyy HH:mm");
+                        string doctor = reader.IsDBNull(1)
+                            ? "Brak lekarza"
+                            : reader.GetString(1);
 
                         string visit = $"{dateTime} - {doctor}";
                         listBoxScheduledVisits.Items.Add(visit);
                     }
                 }
-                
-                string queryHistory = @"
-                    SELECT [Data wizyty], 
-                           [Lekarz].[Imię lekarza] 
-                    FROM [Wizyta] 
-                    INNER JOIN [Lekarz] ON [Wizyta].[Lekarz] = [Lekarz].[Identyfikator lekarza]
-                    WHERE [Data wizyty] < Date()";
+
+                // Прошедшие визиты, отфильтрованные по Username
+                string queryHistory = $@"
+            SELECT 
+                [Wizyta].[Data wizyty],
+                [Lekarz].[Imię lekarza]
+            FROM 
+                ([Wizyta]
+                 INNER JOIN [Lekarz] ON [Wizyta].[Lekarz] = [Lekarz].[Identyfikator lekarza])
+                INNER JOIN [Pacjent] ON [Wizyta].[Pacjent] = [Pacjent].[Identyfikator pacjenta]
+            WHERE 
+                [Wizyta].[Data wizyty] < Date()
+                AND [Pacjent].[Email] = '{Dane.Username}'";
 
                 using (OleDbCommand command = new OleDbCommand(queryHistory, connection))
                 using (OleDbDataReader reader = command.ExecuteReader())
                 {
                     while (reader.Read())
                     {
-                       
-                        string dateTime = reader.IsDBNull(0) ? "Brak daty" : reader.GetDateTime(0).ToString("dd.MM.yyyy HH:mm");
-                        string doctor = reader.IsDBNull(1) ? "Brak lekarza" : reader.GetString(1);
+                        string dateTime = reader.IsDBNull(0)
+                            ? "Brak daty"
+                            : reader.GetDateTime(0).ToString("dd.MM.yyyy HH:mm");
+                        string doctor = reader.IsDBNull(1)
+                            ? "Brak lekarza"
+                            : reader.GetString(1);
 
                         string visit = $"{dateTime} - {doctor}";
                         listBoxHistoryVisits.Items.Add(visit);
@@ -70,8 +87,6 @@ namespace WindowsFormsApp1
                 }
             }
         }
-
-
 
         private void buttonHome_Click(object sender, EventArgs e)
         {
@@ -101,13 +116,12 @@ namespace WindowsFormsApp1
         private void ShowVisitDetails(string visitInfo)
         {
             string[] visitDetails = visitInfo.Split('-');
-            if (visitDetails.Length >= 3)
+            if (visitDetails.Length >= 2)
             {
                 string visitDate = visitDetails[0].Trim();
-                string patient = visitDetails[1].Trim();
-                string doctor = visitDetails[2].Trim();
+                string doctor = visitDetails[1].Trim();
 
-                MessageBox.Show($"Data wizyty: {visitDate}\nPacjent: {patient}\nLekarz: {doctor}",
+                MessageBox.Show($"Data wizyty: {visitDate}\nLekarz: {doctor}",
                     "Szczegóły wizyty", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
@@ -116,6 +130,7 @@ namespace WindowsFormsApp1
                     "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
     }
 }
 
