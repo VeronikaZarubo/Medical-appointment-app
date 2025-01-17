@@ -19,8 +19,8 @@ namespace WindowsFormsApp1
 
         private void bt_createAccount_Click(object sender, EventArgs e)
         {
-            string name = textBox_name.Text.ToString();
-            string surname = textBox_surname.Text.ToString();
+            string name = textBox_surname.Text.ToString();
+            string surname = textBox_name.Text.ToString();
             string username = textBox_email.Text.ToString();
             string password = textBox_pass1.Text.ToString();
             string password2 = textBox_pass2.Text.ToString();
@@ -106,8 +106,8 @@ namespace WindowsFormsApp1
 
         private void bt_swichToLogin_Click(object sender, EventArgs e)
         {
-            Dane.Name = textBox_name.Text;
-            Dane.Surname = textBox_surname.Text;
+            Dane.Name = textBox_surname.Text;
+            Dane.Surname = textBox_name.Text;
             Dane.Username = textBox_email.Text;
 
             Logowanie newLevel = new Logowanie();
