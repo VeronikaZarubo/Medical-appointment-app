@@ -94,9 +94,9 @@
             this.label_login.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_login.Location = new System.Drawing.Point(661, 282);
             this.label_login.Name = "label_login";
-            this.label_login.Size = new System.Drawing.Size(50, 20);
+            this.label_login.Size = new System.Drawing.Size(51, 20);
             this.label_login.TabIndex = 7;
-            this.label_login.Text = "Login";
+            this.label_login.Text = "Email";
             // 
             // bt_passMask
             // 
