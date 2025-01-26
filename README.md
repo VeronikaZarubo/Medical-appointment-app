@@ -4,10 +4,12 @@ Przychodnia prywatna is a desktop aplication made in Windows Forms C# in Visual 
 
 ## Visuals
 Here are registration and login pages:
+
 ![image](https://github.com/user-attachments/assets/52d02d1f-aeb1-402b-800a-a88f004a472d)
 ![image](https://github.com/user-attachments/assets/3763704e-be8e-49a9-be5f-f1bffb225536)
 
 Main menu page:
+
 ![image](https://github.com/user-attachments/assets/ee8ac4b1-4529-4976-a225-a86423ca78ff)
 
 
